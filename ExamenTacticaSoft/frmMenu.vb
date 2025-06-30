@@ -79,9 +79,9 @@
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        ActivarBoton(CType(sender, Button))
         DesactivarBoton()
-        ActualizarTitulo()
-        'AbrirForm(New frmVentas())
+        AbrirForm(New frmSalir())
 
 
     End Sub

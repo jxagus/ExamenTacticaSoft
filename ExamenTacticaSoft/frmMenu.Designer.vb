@@ -47,130 +47,87 @@ Partial Class frmMenu
         Me.PanelMenu.Controls.Add(Me.btnProductos)
         Me.PanelMenu.Controls.Add(Me.btnClientes)
         Me.PanelMenu.Controls.Add(Me.PanelLogo)
-        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
+        resources.ApplyResources(Me.PanelMenu, "PanelMenu")
         Me.PanelMenu.Name = "PanelMenu"
-        Me.PanelMenu.Size = New System.Drawing.Size(220, 553)
-        Me.PanelMenu.TabIndex = 14
         '
         'btnSalir
         '
         Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Bottom
+        resources.ApplyResources(Me.btnSalir, "btnSalir")
         Me.btnSalir.FlatAppearance.BorderSize = 0
-        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.ForeColor = System.Drawing.Color.Black
-        Me.btnSalir.Location = New System.Drawing.Point(0, 493)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(220, 60)
-        Me.btnSalir.TabIndex = 4
-        Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
         'btnVentas
         '
         Me.btnVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnVentas.Dock = System.Windows.Forms.DockStyle.Top
+        resources.ApplyResources(Me.btnVentas, "btnVentas")
         Me.btnVentas.FlatAppearance.BorderSize = 0
-        Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnVentas.ForeColor = System.Drawing.Color.Black
-        Me.btnVentas.Location = New System.Drawing.Point(0, 260)
         Me.btnVentas.Name = "btnVentas"
-        Me.btnVentas.Size = New System.Drawing.Size(220, 60)
-        Me.btnVentas.TabIndex = 3
-        Me.btnVentas.Text = "Ventas"
         Me.btnVentas.UseVisualStyleBackColor = False
         '
         'btnProductos
         '
         Me.btnProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnProductos.Dock = System.Windows.Forms.DockStyle.Top
+        resources.ApplyResources(Me.btnProductos, "btnProductos")
         Me.btnProductos.FlatAppearance.BorderSize = 0
-        Me.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnProductos.ForeColor = System.Drawing.Color.Black
-        Me.btnProductos.Location = New System.Drawing.Point(0, 200)
         Me.btnProductos.Name = "btnProductos"
-        Me.btnProductos.Size = New System.Drawing.Size(220, 60)
-        Me.btnProductos.TabIndex = 2
-        Me.btnProductos.Text = "Productos"
         Me.btnProductos.UseVisualStyleBackColor = False
         '
         'btnClientes
         '
         Me.btnClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnClientes.Dock = System.Windows.Forms.DockStyle.Top
+        resources.ApplyResources(Me.btnClientes, "btnClientes")
         Me.btnClientes.FlatAppearance.BorderSize = 0
-        Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClientes.ForeColor = System.Drawing.Color.Black
-        Me.btnClientes.Location = New System.Drawing.Point(0, 140)
         Me.btnClientes.Name = "btnClientes"
-        Me.btnClientes.Size = New System.Drawing.Size(220, 60)
-        Me.btnClientes.TabIndex = 1
-        Me.btnClientes.Text = "Clientes"
         Me.btnClientes.UseVisualStyleBackColor = False
         '
         'PanelLogo
         '
         Me.PanelLogo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.PanelLogo.Controls.Add(Me.ptbImagenLogo)
-        Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
+        resources.ApplyResources(Me.PanelLogo, "PanelLogo")
         Me.PanelLogo.Name = "PanelLogo"
-        Me.PanelLogo.Size = New System.Drawing.Size(220, 140)
-        Me.PanelLogo.TabIndex = 0
         '
         'ptbImagenLogo
         '
         Me.ptbImagenLogo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ptbImagenLogo.Image = CType(resources.GetObject("ptbImagenLogo.Image"), System.Drawing.Image)
-        Me.ptbImagenLogo.Location = New System.Drawing.Point(0, 0)
+        resources.ApplyResources(Me.ptbImagenLogo, "ptbImagenLogo")
         Me.ptbImagenLogo.Name = "ptbImagenLogo"
-        Me.ptbImagenLogo.Size = New System.Drawing.Size(220, 140)
-        Me.ptbImagenLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ptbImagenLogo.TabIndex = 1
         Me.ptbImagenLogo.TabStop = False
         '
         'PanelTitulo
         '
         Me.PanelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.PanelTitulo.Controls.Add(Me.lblTitulo)
-        Me.PanelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        resources.ApplyResources(Me.PanelTitulo, "PanelTitulo")
         Me.PanelTitulo.ForeColor = System.Drawing.SystemColors.Control
-        Me.PanelTitulo.Location = New System.Drawing.Point(220, 0)
         Me.PanelTitulo.Name = "PanelTitulo"
-        Me.PanelTitulo.Size = New System.Drawing.Size(1013, 100)
-        Me.PanelTitulo.TabIndex = 15
         '
         'lblTitulo
         '
-        Me.lblTitulo.AutoSize = True
+        resources.ApplyResources(Me.lblTitulo, "lblTitulo")
         Me.lblTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.lblTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitulo.ForeColor = System.Drawing.Color.White
-        Me.lblTitulo.Location = New System.Drawing.Point(25, 34)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(148, 31)
-        Me.lblTitulo.TabIndex = 0
-        Me.lblTitulo.Text = "Bienvenido"
         '
         'PanelContenedor
         '
-        Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelContenedor.Location = New System.Drawing.Point(220, 100)
+        resources.ApplyResources(Me.PanelContenedor, "PanelContenedor")
         Me.PanelContenedor.Name = "PanelContenedor"
-        Me.PanelContenedor.Size = New System.Drawing.Size(1013, 453)
-        Me.PanelContenedor.TabIndex = 16
         '
-        'frmProductosClientes
+        'frmMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1233, 553)
         Me.Controls.Add(Me.PanelContenedor)
         Me.Controls.Add(Me.PanelTitulo)
         Me.Controls.Add(Me.PanelMenu)
-        Me.Name = "frmProductosClientes"
-        Me.Text = "frmProductos"
+        Me.Name = "frmMenu"
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelLogo.ResumeLayout(False)
         CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).EndInit()
