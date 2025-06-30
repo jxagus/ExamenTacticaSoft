@@ -172,5 +172,8 @@
     <Content Include="Img\Logo.png" />
     <Content Include="Logo.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ScriptDb\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
