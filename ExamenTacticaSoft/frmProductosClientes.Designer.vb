@@ -39,13 +39,17 @@ Partial Class frmProductosClientes
         Me.Corrreo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.PanelLogo = New System.Windows.Forms.Panel()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblFiltroRapido
         '
         Me.lblFiltroRapido.AutoSize = True
-        Me.lblFiltroRapido.Location = New System.Drawing.Point(9, 69)
+        Me.lblFiltroRapido.Location = New System.Drawing.Point(613, 23)
         Me.lblFiltroRapido.Name = "lblFiltroRapido"
         Me.lblFiltroRapido.Size = New System.Drawing.Size(66, 13)
         Me.lblFiltroRapido.TabIndex = 0
@@ -53,7 +57,7 @@ Partial Class frmProductosClientes
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 323)
+        Me.Button1.Location = New System.Drawing.Point(619, 277)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
@@ -62,7 +66,7 @@ Partial Class frmProductosClientes
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(96, 323)
+        Me.Button2.Location = New System.Drawing.Point(700, 277)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(82, 23)
         Me.Button2.TabIndex = 2
@@ -71,7 +75,7 @@ Partial Class frmProductosClientes
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(184, 323)
+        Me.Button3.Location = New System.Drawing.Point(788, 277)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 3
@@ -81,7 +85,7 @@ Partial Class frmProductosClientes
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(57, 403)
+        Me.ComboBox1.Location = New System.Drawing.Point(661, 357)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 4
@@ -89,7 +93,7 @@ Partial Class frmProductosClientes
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(239, 403)
+        Me.ComboBox2.Location = New System.Drawing.Point(843, 357)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox2.TabIndex = 5
@@ -97,7 +101,7 @@ Partial Class frmProductosClientes
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(421, 403)
+        Me.ComboBox3.Location = New System.Drawing.Point(1025, 357)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox3.TabIndex = 6
@@ -105,7 +109,7 @@ Partial Class frmProductosClientes
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 406)
+        Me.Label1.Location = New System.Drawing.Point(616, 360)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 7
@@ -114,7 +118,7 @@ Partial Class frmProductosClientes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(194, 406)
+        Me.Label2.Location = New System.Drawing.Point(798, 360)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 8
@@ -123,7 +127,7 @@ Partial Class frmProductosClientes
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(376, 406)
+        Me.Label3.Location = New System.Drawing.Point(980, 360)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 13)
         Me.Label3.TabIndex = 9
@@ -133,7 +137,7 @@ Partial Class frmProductosClientes
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Cliente, Me.Telefono, Me.Corrreo})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 107)
+        Me.DataGridView1.Location = New System.Drawing.Point(616, 61)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(443, 196)
         Me.DataGridView1.TabIndex = 11
@@ -160,7 +164,7 @@ Partial Class frmProductosClientes
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(78, 69)
+        Me.TextBox1.Location = New System.Drawing.Point(682, 23)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 12
@@ -168,16 +172,48 @@ Partial Class frmProductosClientes
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(844, 288)
+        Me.ComboBox4.Location = New System.Drawing.Point(898, 279)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox4.TabIndex = 13
         '
-        'frmProductos
+        'PanelMenu
+        '
+        Me.PanelMenu.BackColor = System.Drawing.Color.SlateBlue
+        Me.PanelMenu.Controls.Add(Me.Button4)
+        Me.PanelMenu.Controls.Add(Me.PanelLogo)
+        Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
+        Me.PanelMenu.Name = "PanelMenu"
+        Me.PanelMenu.Size = New System.Drawing.Size(220, 700)
+        Me.PanelMenu.TabIndex = 14
+        '
+        'PanelLogo
+        '
+        Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
+        Me.PanelLogo.Name = "PanelLogo"
+        Me.PanelLogo.Size = New System.Drawing.Size(220, 140)
+        Me.PanelLogo.TabIndex = 0
+        '
+        'Button4
+        '
+        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Location = New System.Drawing.Point(0, 140)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(220, 60)
+        Me.Button4.TabIndex = 1
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'frmProductosClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1215, 700)
+        Me.Controls.Add(Me.PanelMenu)
         Me.Controls.Add(Me.ComboBox4)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
@@ -191,9 +227,10 @@ Partial Class frmProductosClientes
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblFiltroRapido)
-        Me.Name = "frmProductos"
+        Me.Name = "frmProductosClientes"
         Me.Text = "frmProductos"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -216,4 +253,7 @@ Partial Class frmProductosClientes
     Friend WithEvents Corrreo As DataGridViewTextBoxColumn
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents PanelMenu As Panel
+    Friend WithEvents Button4 As Button
+    Friend WithEvents PanelLogo As Panel
 End Class
