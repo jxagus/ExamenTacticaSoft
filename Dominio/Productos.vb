@@ -1,4 +1,4 @@
-﻿Public Class Producto 'Id, Nombre, Precioo, Categoria
+﻿Public Class Producto 'Id, Nombre, Precio, Categoria
     Private _Id As Integer
     Private _Nombre As String
     Private _Precio As Decimal
