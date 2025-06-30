@@ -23,11 +23,12 @@ Partial Class frmClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Corrreo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Accion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -38,8 +39,7 @@ Partial Class frmClientes
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblFiltroRapido = New System.Windows.Forms.Label()
         Me.lblClientes = New System.Windows.Forms.Label()
-        Me.Accion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -49,14 +49,14 @@ Partial Class frmClientes
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 25
         '
-        'DataGridView1
+        'dgvClientes
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Cliente, Me.Telefono, Me.Corrreo, Me.Accion})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 85)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(540, 301)
-        Me.DataGridView1.TabIndex = 24
+        Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Cliente, Me.Telefono, Me.Corrreo, Me.Accion})
+        Me.dgvClientes.Location = New System.Drawing.Point(12, 85)
+        Me.dgvClientes.Name = "dgvClientes"
+        Me.dgvClientes.Size = New System.Drawing.Size(540, 301)
+        Me.dgvClientes.TabIndex = 24
         '
         'Id
         '
@@ -77,6 +77,11 @@ Partial Class frmClientes
         '
         Me.Corrreo.HeaderText = "Correo"
         Me.Corrreo.Name = "Corrreo"
+        '
+        'Accion
+        '
+        Me.Accion.HeaderText = "Accion"
+        Me.Accion.Name = "Accion"
         '
         'Label3
         '
@@ -165,11 +170,6 @@ Partial Class frmClientes
         Me.lblClientes.TabIndex = 41
         Me.lblClientes.Text = "CLIENTES"
         '
-        'Accion
-        '
-        Me.Accion.HeaderText = "Accion"
-        Me.Accion.Name = "Accion"
-        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -177,7 +177,7 @@ Partial Class frmClientes
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lblClientes)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvClientes)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -189,13 +189,13 @@ Partial Class frmClientes
         Me.Controls.Add(Me.lblFiltroRapido)
         Me.Name = "frmClientes"
         Me.Text = "frmClientes"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvClientes As DataGridView
     Friend WithEvents Id As DataGridViewTextBoxColumn
     Friend WithEvents Cliente As DataGridViewTextBoxColumn
     Friend WithEvents Telefono As DataGridViewTextBoxColumn

@@ -2,9 +2,9 @@
 
 Namespace Negocio
     Public Class AccesoDatos 'Conexion a base de datos SQL Server con Ado.NET
-        Private conexion As SqlConnection
-        Private comando As SqlCommand
-        Private lector As SqlDataReader
+        Public conexion As SqlConnection
+        Public comando As SqlCommand
+        Public lector As SqlDataReader
 
         Public ReadOnly Property LectorDatos As SqlDataReader
             Get
