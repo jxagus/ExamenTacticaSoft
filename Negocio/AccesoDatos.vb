@@ -27,7 +27,7 @@ Namespace Negocio
                 conexion.Open()
                 lector = comando.ExecuteReader()
             Catch ex As Exception
-                Throw 'Manejamos el error
+                Throw 'Manejamos el error sin capturarlo para manejarlo despues
             End Try
         End Sub
 
