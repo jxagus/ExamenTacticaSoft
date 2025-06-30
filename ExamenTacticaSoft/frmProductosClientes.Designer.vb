@@ -41,7 +41,10 @@ Partial Class frmProductosClientes
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.PanelLogo = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnClientes = New System.Windows.Forms.Button()
+        Me.btnProductos = New System.Windows.Forms.Button()
+        Me.btnVentas = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenu.SuspendLayout()
         Me.SuspendLayout()
@@ -180,7 +183,10 @@ Partial Class frmProductosClientes
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.SlateBlue
-        Me.PanelMenu.Controls.Add(Me.Button4)
+        Me.PanelMenu.Controls.Add(Me.Button7)
+        Me.PanelMenu.Controls.Add(Me.btnVentas)
+        Me.PanelMenu.Controls.Add(Me.btnProductos)
+        Me.PanelMenu.Controls.Add(Me.btnClientes)
         Me.PanelMenu.Controls.Add(Me.PanelLogo)
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelMenu.Location = New System.Drawing.Point(0, 0)
@@ -196,17 +202,57 @@ Partial Class frmProductosClientes
         Me.PanelLogo.Size = New System.Drawing.Size(220, 140)
         Me.PanelLogo.TabIndex = 0
         '
-        'Button4
+        'btnClientes
         '
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(0, 140)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(220, 60)
-        Me.Button4.TabIndex = 1
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnClientes.BackColor = System.Drawing.Color.Lavender
+        Me.btnClientes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnClientes.FlatAppearance.BorderSize = 0
+        Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClientes.Location = New System.Drawing.Point(0, 140)
+        Me.btnClientes.Name = "btnClientes"
+        Me.btnClientes.Size = New System.Drawing.Size(220, 60)
+        Me.btnClientes.TabIndex = 1
+        Me.btnClientes.Text = "Clientes"
+        Me.btnClientes.UseVisualStyleBackColor = False
+        '
+        'btnProductos
+        '
+        Me.btnProductos.BackColor = System.Drawing.Color.Lavender
+        Me.btnProductos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnProductos.FlatAppearance.BorderSize = 0
+        Me.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProductos.Location = New System.Drawing.Point(0, 200)
+        Me.btnProductos.Name = "btnProductos"
+        Me.btnProductos.Size = New System.Drawing.Size(220, 60)
+        Me.btnProductos.TabIndex = 2
+        Me.btnProductos.Text = "Productos"
+        Me.btnProductos.UseVisualStyleBackColor = False
+        '
+        'btnVentas
+        '
+        Me.btnVentas.BackColor = System.Drawing.Color.Lavender
+        Me.btnVentas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnVentas.FlatAppearance.BorderSize = 0
+        Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVentas.Location = New System.Drawing.Point(0, 260)
+        Me.btnVentas.Name = "btnVentas"
+        Me.btnVentas.Size = New System.Drawing.Size(220, 60)
+        Me.btnVentas.TabIndex = 3
+        Me.btnVentas.Text = "Ventas"
+        Me.btnVentas.UseVisualStyleBackColor = False
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.Lavender
+        Me.Button7.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Location = New System.Drawing.Point(0, 640)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(220, 60)
+        Me.Button7.TabIndex = 4
+        Me.Button7.Text = "Salir"
+        Me.Button7.UseVisualStyleBackColor = False
         '
         'frmProductosClientes
         '
@@ -254,6 +300,9 @@ Partial Class frmProductosClientes
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents PanelMenu As Panel
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnClientes As Button
     Friend WithEvents PanelLogo As Panel
+    Friend WithEvents btnVentas As Button
+    Friend WithEvents btnProductos As Button
+    Friend WithEvents Button7 As Button
 End Class
