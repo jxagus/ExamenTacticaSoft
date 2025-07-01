@@ -25,11 +25,7 @@ Partial Class frmProductos
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lblFiltroRapido = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -39,7 +35,7 @@ Partial Class frmProductos
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -67,34 +63,13 @@ Partial Class frmProductos
         Me.Label4.TabIndex = 40
         Me.Label4.Text = "Productos"
         '
-        'DataGridView1
+        'dgvProductos
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Nombre, Me.Precio, Me.Categoria})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 49)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(467, 362)
-        Me.DataGridView1.TabIndex = 41
-        '
-        'Id
-        '
-        Me.Id.HeaderText = "Id"
-        Me.Id.Name = "Id"
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        '
-        'Precio
-        '
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        '
-        'Categoria
-        '
-        Me.Categoria.HeaderText = "Categoria"
-        Me.Categoria.Name = "Categoria"
+        Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProductos.Location = New System.Drawing.Point(12, 49)
+        Me.dgvProductos.Name = "dgvProductos"
+        Me.dgvProductos.Size = New System.Drawing.Size(467, 362)
+        Me.dgvProductos.TabIndex = 41
         '
         'Label3
         '
@@ -188,13 +163,13 @@ Partial Class frmProductos
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvProductos)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.lblFiltroRapido)
         Me.Name = "frmProductos"
         Me.Text = "frmProductos"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -202,11 +177,7 @@ Partial Class frmProductos
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents lblFiltroRapido As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Id As DataGridViewTextBoxColumn
-    Friend WithEvents Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents Precio As DataGridViewTextBoxColumn
-    Friend WithEvents Categoria As DataGridViewTextBoxColumn
+    Friend WithEvents dgvProductos As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
