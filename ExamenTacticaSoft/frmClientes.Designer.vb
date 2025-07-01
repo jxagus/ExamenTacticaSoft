@@ -125,9 +125,10 @@ Partial Class frmClientes
         'lblClientes
         '
         Me.lblClientes.AutoSize = True
+        Me.lblClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblClientes.Location = New System.Drawing.Point(343, 9)
         Me.lblClientes.Name = "lblClientes"
-        Me.lblClientes.Size = New System.Drawing.Size(59, 13)
+        Me.lblClientes.Size = New System.Drawing.Size(148, 31)
         Me.lblClientes.TabIndex = 41
         Me.lblClientes.Text = "CLIENTES"
         '

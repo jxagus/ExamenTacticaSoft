@@ -24,7 +24,7 @@ Partial Class frmProductos
     Private Sub InitializeComponent()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lblFiltroRapido = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lbltitulo = New System.Windows.Forms.Label()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -39,7 +39,7 @@ Partial Class frmProductos
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(78, 23)
+        Me.TextBox1.Location = New System.Drawing.Point(92, 58)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 38
@@ -47,27 +47,28 @@ Partial Class frmProductos
         'lblFiltroRapido
         '
         Me.lblFiltroRapido.AutoSize = True
-        Me.lblFiltroRapido.Location = New System.Drawing.Point(9, 23)
+        Me.lblFiltroRapido.Location = New System.Drawing.Point(23, 58)
         Me.lblFiltroRapido.Name = "lblFiltroRapido"
         Me.lblFiltroRapido.Size = New System.Drawing.Size(66, 13)
         Me.lblFiltroRapido.TabIndex = 27
         Me.lblFiltroRapido.Text = "FiltroRapido:"
         '
-        'Label4
+        'lbltitulo
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(344, 3)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 13)
-        Me.Label4.TabIndex = 40
-        Me.Label4.Text = "Productos"
+        Me.lbltitulo.AutoSize = True
+        Me.lbltitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltitulo.Location = New System.Drawing.Point(321, 9)
+        Me.lbltitulo.Name = "lbltitulo"
+        Me.lbltitulo.Size = New System.Drawing.Size(137, 31)
+        Me.lbltitulo.TabIndex = 40
+        Me.lbltitulo.Text = "Productos"
         '
         'dgvProductos
         '
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Location = New System.Drawing.Point(12, 49)
+        Me.dgvProductos.Location = New System.Drawing.Point(12, 91)
         Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.Size = New System.Drawing.Size(543, 362)
+        Me.dgvProductos.Size = New System.Drawing.Size(526, 320)
         Me.dgvProductos.TabIndex = 41
         '
         'Label3
@@ -153,7 +154,7 @@ Partial Class frmProductos
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.dgvProductos)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lbltitulo)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.lblFiltroRapido)
         Me.Name = "frmProductos"
@@ -165,7 +166,7 @@ Partial Class frmProductos
     End Sub
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents lblFiltroRapido As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lbltitulo As Label
     Friend WithEvents dgvProductos As DataGridView
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
