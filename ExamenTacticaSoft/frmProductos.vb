@@ -19,8 +19,8 @@ Public Class frmProductos
         If dgvProductos.Columns("btnModificar") Is Nothing Then
             Dim btnCol As New DataGridViewButtonColumn()
             btnCol.Name = "btnModificar"
-            btnCol.HeaderText = "Acción"
-            btnCol.Text = "Modificar"
+            btnCol.HeaderText = "Acción-Modificar"
+            btnCol.Text = "✍️" 'Emoji cutie
             btnCol.UseColumnTextForButtonValue = True
             dgvProductos.Columns.Add(btnCol)
         End If
