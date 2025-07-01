@@ -23,12 +23,6 @@ Partial Class frmClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.dgvClientes = New System.Windows.Forms.DataGridView()
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Corrreo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Accion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -39,6 +33,7 @@ Partial Class frmClientes
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblFiltroRapido = New System.Windows.Forms.Label()
         Me.lblClientes = New System.Windows.Forms.Label()
+        Me.dgvClientes = New System.Windows.Forms.DataGridView()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,40 +43,6 @@ Partial Class frmClientes
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 25
-        '
-        'dgvClientes
-        '
-        Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvClientes.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Cliente, Me.Telefono, Me.Corrreo, Me.Accion})
-        Me.dgvClientes.Location = New System.Drawing.Point(12, 85)
-        Me.dgvClientes.Name = "dgvClientes"
-        Me.dgvClientes.Size = New System.Drawing.Size(540, 301)
-        Me.dgvClientes.TabIndex = 24
-        '
-        'Id
-        '
-        Me.Id.HeaderText = "ID"
-        Me.Id.Name = "Id"
-        '
-        'Cliente
-        '
-        Me.Cliente.HeaderText = "Cliente"
-        Me.Cliente.Name = "Cliente"
-        '
-        'Telefono
-        '
-        Me.Telefono.HeaderText = "Telefono"
-        Me.Telefono.Name = "Telefono"
-        '
-        'Corrreo
-        '
-        Me.Corrreo.HeaderText = "Correo"
-        Me.Corrreo.Name = "Corrreo"
-        '
-        'Accion
-        '
-        Me.Accion.HeaderText = "Accion"
-        Me.Accion.Name = "Accion"
         '
         'Label3
         '
@@ -170,6 +131,14 @@ Partial Class frmClientes
         Me.lblClientes.TabIndex = 41
         Me.lblClientes.Text = "CLIENTES"
         '
+        'dgvClientes
+        '
+        Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvClientes.Location = New System.Drawing.Point(12, 85)
+        Me.dgvClientes.Name = "dgvClientes"
+        Me.dgvClientes.Size = New System.Drawing.Size(540, 301)
+        Me.dgvClientes.TabIndex = 24
+        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -195,11 +164,6 @@ Partial Class frmClientes
 
     End Sub
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents dgvClientes As DataGridView
-    Friend WithEvents Id As DataGridViewTextBoxColumn
-    Friend WithEvents Cliente As DataGridViewTextBoxColumn
-    Friend WithEvents Telefono As DataGridViewTextBoxColumn
-    Friend WithEvents Corrreo As DataGridViewTextBoxColumn
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -210,5 +174,5 @@ Partial Class frmClientes
     Friend WithEvents Button1 As Button
     Friend WithEvents lblFiltroRapido As Label
     Friend WithEvents lblClientes As Label
-    Friend WithEvents Accion As DataGridViewTextBoxColumn
+    Friend WithEvents dgvClientes As DataGridView
 End Class

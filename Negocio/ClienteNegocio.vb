@@ -10,14 +10,15 @@ Public Class ClienteNegocio
             acceso.SetearConsulta("SELECT ID, Cliente, Telefono, Correo FROM clientes")
             acceso.EjecutarLectura()
 
-            While acceso.lector.Read()
+            While acceso.LectorDatos.Read()
                 Dim aux As New Cliente()
-                aux.Id = acceso.lector("ID")
-                aux.NombreCliente = acceso.lector("Cliente")
-                aux.Telefono = acceso.lector("Telefono").ToString()
-                aux.Correo = acceso.lector("Correo").ToString()
+                aux.Id = acceso.LectorDatos("ID")
+                aux.NombreCliente = acceso.LectorDatos("Cliente")
+                aux.Telefono = acceso.LectorDatos("Telefono").ToString()
+                aux.Correo = acceso.LectorDatos("Correo").ToString()
                 lista.Add(aux)
             End While
+
 
             Return lista
 
