@@ -108,7 +108,7 @@ Partial Class frmVentas
         'dgvDetalleVenta
         '
         Me.dgvDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDetalleVenta.Location = New System.Drawing.Point(309, 93)
+        Me.dgvDetalleVenta.Location = New System.Drawing.Point(225, 110)
         Me.dgvDetalleVenta.Name = "dgvDetalleVenta"
         Me.dgvDetalleVenta.Size = New System.Drawing.Size(416, 261)
         Me.dgvDetalleVenta.TabIndex = 51
@@ -116,7 +116,7 @@ Partial Class frmVentas
         'lblTotalGeneral
         '
         Me.lblTotalGeneral.AutoSize = True
-        Me.lblTotalGeneral.Location = New System.Drawing.Point(105, 305)
+        Me.lblTotalGeneral.Location = New System.Drawing.Point(222, 385)
         Me.lblTotalGeneral.Name = "lblTotalGeneral"
         Me.lblTotalGeneral.Size = New System.Drawing.Size(87, 13)
         Me.lblTotalGeneral.TabIndex = 52
@@ -124,7 +124,7 @@ Partial Class frmVentas
         '
         'btnGuardarVenta
         '
-        Me.btnGuardarVenta.Location = New System.Drawing.Point(88, 344)
+        Me.btnGuardarVenta.Location = New System.Drawing.Point(375, 377)
         Me.btnGuardarVenta.Name = "btnGuardarVenta"
         Me.btnGuardarVenta.Size = New System.Drawing.Size(121, 37)
         Me.btnGuardarVenta.TabIndex = 53
@@ -135,7 +135,7 @@ Partial Class frmVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(775, 439)
         Me.Controls.Add(Me.btnGuardarVenta)
         Me.Controls.Add(Me.lblTotalGeneral)
         Me.Controls.Add(Me.dgvDetalleVenta)
