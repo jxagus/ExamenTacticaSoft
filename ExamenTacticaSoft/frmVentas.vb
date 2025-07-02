@@ -9,7 +9,7 @@ Public Class frmVentas
         ConfigurarGrilla()
     End Sub
     Private Sub ConfigurarGrilla()
-        ' Evitás columnas automáticas (opcional si ya hiciste a mano)
+        ' Evitas columnas automáticas
         dgvDetalleVenta.AutoGenerateColumns = False
         dgvDetalleVenta.Columns.Clear()
 
@@ -25,10 +25,10 @@ Public Class frmVentas
         Dim precioUnitario As Decimal = productoSeleccionado.Precio
         Dim precioTotal As Decimal = cantidad * precioUnitario
 
-        ' Agregás una fila a la grilla
+        ' Agregas una fila a la grilla
         dgvDetalleVenta.Rows.Add(productoSeleccionado.Id, productoSeleccionado.Nombre, cantidad, precioUnitario, precioTotal)
 
-        ' Sumás al total
+        ' Sumas al total
         totalGeneral += precioTotal
         lblTotalGeneral.Text = "Total: $" & totalGeneral.ToString("0.00")
 
