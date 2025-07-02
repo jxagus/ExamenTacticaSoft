@@ -3,7 +3,22 @@ Imports Negocio
 Public Class frmVentas
     Private totalGeneral As Decimal = 0
     Private negocioVentas As New VentaNegocio()
+    Private Sub frmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'Load
+        CargarClientes()
+        CargarProductos()
+        ConfigurarGrilla()
+    End Sub
+    Private Sub ConfigurarGrilla()
+        ' Evitás columnas automáticas (opcional si ya hiciste a mano)
+        dgvDetalleVenta.AutoGenerateColumns = False
+        dgvDetalleVenta.Columns.Clear()
 
+        dgvDetalleVenta.Columns.Add("IDProducto", "ID Producto")
+        dgvDetalleVenta.Columns.Add("NombreProducto", "Nombre")
+        dgvDetalleVenta.Columns.Add("Cantidad", "Cantidad")
+        dgvDetalleVenta.Columns.Add("PrecioUnitario", "Precio Unitario")
+        dgvDetalleVenta.Columns.Add("PrecioTotal", "Precio Total")
+    End Sub
     Private Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAgregarProducto.Click
         Dim productoSeleccionado As Producto = CType(cbProductos.SelectedItem, Producto)
         Dim cantidad As Integer = Integer.Parse(txtCantidad.Text)
@@ -54,9 +69,6 @@ Public Class frmVentas
         cbProductos.DisplayMember = "Nombre"
         cbProductos.ValueMember = "Id"
     End Sub
-    Private Sub frmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'Load
-        CargarClientes()
-        CargarProductos()
-    End Sub
+
 
 End Class
