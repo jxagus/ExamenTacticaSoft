@@ -39,7 +39,7 @@ Partial Class frmProductos
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(81, 62)
+        Me.TextBox1.Location = New System.Drawing.Point(81, 54)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 38
@@ -47,7 +47,7 @@ Partial Class frmProductos
         'lblFiltroRapido
         '
         Me.lblFiltroRapido.AutoSize = True
-        Me.lblFiltroRapido.Location = New System.Drawing.Point(12, 62)
+        Me.lblFiltroRapido.Location = New System.Drawing.Point(12, 54)
         Me.lblFiltroRapido.Name = "lblFiltroRapido"
         Me.lblFiltroRapido.Size = New System.Drawing.Size(66, 13)
         Me.lblFiltroRapido.TabIndex = 27
@@ -66,7 +66,7 @@ Partial Class frmProductos
         'dgvProductos
         '
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Location = New System.Drawing.Point(12, 91)
+        Me.dgvProductos.Location = New System.Drawing.Point(12, 83)
         Me.dgvProductos.Name = "dgvProductos"
         Me.dgvProductos.Size = New System.Drawing.Size(536, 300)
         Me.dgvProductos.TabIndex = 41
@@ -74,7 +74,7 @@ Partial Class frmProductos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(351, 413)
+        Me.Label3.Location = New System.Drawing.Point(351, 405)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 13)
         Me.Label3.TabIndex = 47
@@ -83,7 +83,7 @@ Partial Class frmProductos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(166, 413)
+        Me.Label2.Location = New System.Drawing.Point(166, 405)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 46
@@ -92,7 +92,7 @@ Partial Class frmProductos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(2, 413)
+        Me.Label1.Location = New System.Drawing.Point(2, 405)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 45
@@ -101,7 +101,7 @@ Partial Class frmProductos
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(396, 410)
+        Me.ComboBox3.Location = New System.Drawing.Point(396, 402)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(80, 21)
         Me.ComboBox3.TabIndex = 44
@@ -109,7 +109,7 @@ Partial Class frmProductos
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(211, 410)
+        Me.ComboBox2.Location = New System.Drawing.Point(211, 402)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(134, 21)
         Me.ComboBox2.TabIndex = 43
@@ -117,7 +117,7 @@ Partial Class frmProductos
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(47, 410)
+        Me.ComboBox1.Location = New System.Drawing.Point(47, 402)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(102, 21)
         Me.ComboBox1.TabIndex = 42
