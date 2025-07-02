@@ -27,7 +27,8 @@ Public Class frmHistorialVentas
     End Sub
 
     Private Sub CargarHistorial()
-        Dim listaVentas As List(Of Venta) = ventaNeg.ObtenerVentasPorCliente(clienteActual.Id)
+        Dim negocio As New VentaNegocio()
+        Dim listaVentas As List(Of Venta) = negocio.ObtenerVentasPorCliente(clienteActual.Id)
 
         dgvHistorial.Rows.Clear()
 
@@ -35,5 +36,6 @@ Public Class frmHistorialVentas
             dgvHistorial.Rows.Add(venta.Id, venta.Fecha.ToShortDateString(), "$" & venta.Total.ToString("0.00"))
         Next
     End Sub
+
 
 End Class

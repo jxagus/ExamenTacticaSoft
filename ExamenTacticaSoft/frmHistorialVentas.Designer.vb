@@ -40,9 +40,9 @@ Partial Class frmHistorialVentas
         'dgvHistorial
         '
         Me.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHistorial.Location = New System.Drawing.Point(262, 188)
+        Me.dgvHistorial.Location = New System.Drawing.Point(71, 99)
         Me.dgvHistorial.Name = "dgvHistorial"
-        Me.dgvHistorial.Size = New System.Drawing.Size(240, 150)
+        Me.dgvHistorial.Size = New System.Drawing.Size(626, 219)
         Me.dgvHistorial.TabIndex = 44
         '
         'frmHistorialVentas

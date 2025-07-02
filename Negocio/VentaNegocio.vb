@@ -42,7 +42,37 @@ Public Class VentaNegocio
             acceso.CerrarConexion()
         End Try
     End Sub
-    Public Function ObtenerVentasPorCliente(idCliente As Integer) As List(Of Venta) 'Para el historial
+    Public Function ObtenerItemsDeVenta(idVenta As Integer) As List(Of ItemVenta)
+        Dim lista As New List(Of ItemVenta)
+        Dim datos As New AccesoDatos()
+
+        Try
+            Dim consulta As String = "SELECT p.Nombre, vi.PrecioUnitario, vi.Cantidad, vi.PrecioTotal 
+                                  FROM ventasitems vi
+                                  INNER JOIN productos p ON p.ID = vi.IDProducto
+                                  WHERE vi.IDVenta = @idVenta"
+            datos.SetearConsulta(consulta)
+            datos.SetearParametro("@idVenta", idVenta)
+            datos.EjecutarLectura()
+
+            While datos.LectorDatos.Read()
+                Dim item As New ItemVenta()
+                item.NombreProducto = datos.LectorDatos("Nombre").ToString()
+                item.PrecioUnitario = Convert.ToDecimal(datos.LectorDatos("PrecioUnitario"))
+                item.Cantidad = Convert.ToDecimal(datos.LectorDatos("Cantidad"))
+                item.PrecioTotal = Convert.ToDecimal(datos.LectorDatos("PrecioTotal"))
+                lista.Add(item)
+            End While
+
+            Return lista
+
+        Catch ex As Exception
+            Throw ex
+        Finally
+            datos.CerrarConexion()
+        End Try
+    End Function
+    Public Function ObtenerVentasPorCliente(idCliente As Integer) As List(Of Venta)
         Dim lista As New List(Of Venta)
         Dim datos As New AccesoDatos()
 
@@ -53,9 +83,9 @@ Public Class VentaNegocio
 
             While datos.LectorDatos.Read()
                 Dim venta As New Venta()
-                venta.Id = datos.LectorDatos("ID")
-                venta.Fecha = datos.LectorDatos("Fecha")
-                venta.Total = datos.LectorDatos("Total")
+                venta.Id = Convert.ToInt32(datos.LectorDatos("ID"))
+                venta.Fecha = Convert.ToDateTime(datos.LectorDatos("Fecha"))
+                venta.Total = Convert.ToDecimal(datos.LectorDatos("Total"))
                 lista.Add(venta)
             End While
 
