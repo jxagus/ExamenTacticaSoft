@@ -38,4 +38,25 @@ Public Class frmVentas
         Next
 
     End Sub
+    Private Sub CargarClientes()
+        Dim clienteNeg As New ClienteNegocio()
+        Dim listaClientes As List(Of Cliente) = clienteNeg.listar()
+
+        cbClientes.DataSource = listaClientes
+        cbClientes.DisplayMember = "NombreCliente"
+        cbClientes.ValueMember = "Id"
+    End Sub
+    Private Sub CargarProductos()
+        Dim productoNeg As New ProductoNegocio()
+        Dim listaProductos As List(Of Producto) = productoNeg.listar()
+
+        cbProductos.DataSource = listaProductos
+        cbProductos.DisplayMember = "Nombre"
+        cbProductos.ValueMember = "Id"
+    End Sub
+    Private Sub frmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'Load
+        CargarClientes()
+        CargarProductos()
+    End Sub
+
 End Class
