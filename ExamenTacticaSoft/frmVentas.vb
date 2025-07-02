@@ -3,11 +3,24 @@ Imports Negocio
 Public Class frmVentas
     Private totalGeneral As Decimal = 0
     Private negocioVentas As New VentaNegocio()
-    Private Sub frmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'Load
+    Private cargando As Boolean = False
+
+    Private Sub frmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargando = True
         CargarClientes()
         CargarProductos()
         ConfigurarGrilla()
+        cargando = False
     End Sub
+
+    Private Sub cbClientes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbClientes.SelectedIndexChanged
+        If cargando Then Return ' Evitar limpiar si es al iniciar
+
+        dgvDetalleVenta.Rows.Clear()
+        totalGeneral = 0
+        lblTotalGeneral.Text = "Total: $0.00"
+    End Sub
+
     Private Sub ConfigurarGrilla()
         ' Evitas columnas automáticas
         dgvDetalleVenta.AutoGenerateColumns = False
