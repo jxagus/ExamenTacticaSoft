@@ -42,5 +42,30 @@ Public Class VentaNegocio
             acceso.CerrarConexion()
         End Try
     End Sub
+    Public Function ObtenerVentasPorCliente(idCliente As Integer) As List(Of Venta) 'Para el historial
+        Dim lista As New List(Of Venta)
+        Dim datos As New AccesoDatos()
+
+        Try
+            datos.SetearConsulta("SELECT ID, Fecha, Total FROM ventas WHERE IDCliente = @idCliente")
+            datos.SetearParametro("@idCliente", idCliente)
+            datos.EjecutarLectura()
+
+            While datos.LectorDatos.Read()
+                Dim venta As New Venta()
+                venta.Id = datos.LectorDatos("ID")
+                venta.Fecha = datos.LectorDatos("Fecha")
+                venta.Total = datos.LectorDatos("Total")
+                lista.Add(venta)
+            End While
+
+            Return lista
+
+        Catch ex As Exception
+            Throw ex
+        Finally
+            datos.CerrarConexion()
+        End Try
+    End Function
 
 End Class
