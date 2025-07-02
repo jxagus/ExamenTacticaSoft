@@ -33,6 +33,7 @@ Partial Class frmVentas
         Me.dgvDetalleVenta = New System.Windows.Forms.DataGridView()
         Me.lblTotalGeneral = New System.Windows.Forms.Label()
         Me.btnGuardarVenta = New System.Windows.Forms.Button()
+        Me.btnHistorial = New System.Windows.Forms.Button()
         CType(Me.dgvDetalleVenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -131,11 +132,21 @@ Partial Class frmVentas
         Me.btnGuardarVenta.Text = "Guardar"
         Me.btnGuardarVenta.UseVisualStyleBackColor = True
         '
+        'btnHistorial
+        '
+        Me.btnHistorial.Location = New System.Drawing.Point(682, 110)
+        Me.btnHistorial.Name = "btnHistorial"
+        Me.btnHistorial.Size = New System.Drawing.Size(75, 261)
+        Me.btnHistorial.TabIndex = 54
+        Me.btnHistorial.Text = "Historial"
+        Me.btnHistorial.UseVisualStyleBackColor = True
+        '
         'frmVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(775, 439)
+        Me.Controls.Add(Me.btnHistorial)
         Me.Controls.Add(Me.btnGuardarVenta)
         Me.Controls.Add(Me.lblTotalGeneral)
         Me.Controls.Add(Me.dgvDetalleVenta)
@@ -166,4 +177,5 @@ Partial Class frmVentas
     Friend WithEvents dgvDetalleVenta As DataGridView
     Friend WithEvents lblTotalGeneral As Label
     Friend WithEvents btnGuardarVenta As Button
+    Friend WithEvents btnHistorial As Button
 End Class

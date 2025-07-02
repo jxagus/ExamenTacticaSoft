@@ -22,9 +22,44 @@ Partial Class frmHistorialVentas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.lblHistorial = New System.Windows.Forms.Label()
+        Me.dgvHistorial = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvHistorial, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'lblHistorial
+        '
+        Me.lblHistorial.AutoSize = True
+        Me.lblHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHistorial.Location = New System.Drawing.Point(269, 26)
+        Me.lblHistorial.Name = "lblHistorial"
+        Me.lblHistorial.Size = New System.Drawing.Size(205, 31)
+        Me.lblHistorial.TabIndex = 43
+        Me.lblHistorial.Text = "Historial Ventas"
+        '
+        'dgvHistorial
+        '
+        Me.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvHistorial.Location = New System.Drawing.Point(262, 188)
+        Me.dgvHistorial.Name = "dgvHistorial"
+        Me.dgvHistorial.Size = New System.Drawing.Size(240, 150)
+        Me.dgvHistorial.TabIndex = 44
+        '
+        'frmHistorialVentas
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.dgvHistorial)
+        Me.Controls.Add(Me.lblHistorial)
+        Me.Name = "frmHistorialVentas"
         Me.Text = "frmHistorialVentas"
+        CType(Me.dgvHistorial, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+
+    Friend WithEvents lblHistorial As Label
+    Friend WithEvents dgvHistorial As DataGridView
 End Class

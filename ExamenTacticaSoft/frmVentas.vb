@@ -105,4 +105,11 @@ Public Class frmVentas
         txtCantidad.Clear()
     End Sub
 
+    Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
+        If cbClientes.SelectedItem IsNot Nothing Then
+            Dim clienteSeleccionado As Cliente = CType(cbClientes.SelectedItem, Cliente)
+            Dim frm As New frmHistorialVentas(clienteSeleccionado)
+            frm.ShowDialog()
+        End If
+    End Sub
 End Class
