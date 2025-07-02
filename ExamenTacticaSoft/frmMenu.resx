@@ -126,7 +126,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSalir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 493</value>
+    <value>0, 502</value>
   </data>
   <data name="btnSalir.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 60</value>
@@ -695,7 +695,7 @@
     <value>0, 0</value>
   </data>
   <data name="PanelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 553</value>
+    <value>220, 562</value>
   </data>
   <data name="PanelMenu.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -749,7 +749,7 @@
     <value>220, 0</value>
   </data>
   <data name="PanelTitulo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1013, 100</value>
+    <value>852, 100</value>
   </data>
   <data name="PanelTitulo.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -773,7 +773,7 @@
     <value>220, 100</value>
   </data>
   <data name="PanelContenedor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1013, 453</value>
+    <value>852, 462</value>
   </data>
   <data name="PanelContenedor.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -797,7 +797,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1233, 553</value>
+    <value>1072, 562</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
