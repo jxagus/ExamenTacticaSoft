@@ -15,6 +15,18 @@ Public Class frmClientes
 
         dgvClientes.AutoGenerateColumns = True 'hola
         dgvClientes.DataSource = listaClientes
+
+        dgvClientes.AutoGenerateColumns = True
+        dgvClientes.DataSource = negocio.listar()
+        'Agregar boton para modificar
+        If dgvClientes.Columns("btnModificar") Is Nothing Then
+            Dim btnCol As New DataGridViewButtonColumn()
+            btnCol.Name = "btnModificar"
+            btnCol.HeaderText = "Acción-Modificar"
+            btnCol.Text = "✍️" 'Emoji cutie
+            btnCol.UseColumnTextForButtonValue = True
+            dgvClientes.Columns.Add(btnCol)
+        End If
     End Sub
 
     Private Sub dgvClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellContentClick
