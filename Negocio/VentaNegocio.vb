@@ -28,7 +28,7 @@ Public Class VentaNegocio
         Try
             acceso.SetearConsulta("INSERT INTO ventasitems (IDVenta, IDProducto, PrecioUnitario, Cantidad, PrecioTotal) 
                                VALUES (@idVenta, @idProducto, @precioUnitario, @cantidad, @precioTotal)")
-
+            acceso.comando.Parameters.Clear()
             acceso.SetearParametro("@idVenta", idVenta)
             acceso.SetearParametro("@idProducto", idProducto)
             acceso.SetearParametro("@precioUnitario", precioUnitario)
