@@ -1,6 +1,8 @@
 ﻿Imports Dominio
 Imports Negocio
+
 Public Class frmVentas
+
     Private totalGeneral As Decimal = 0
     Private negocioVentas As New VentaNegocio()
     Private cargando As Boolean = False
@@ -14,15 +16,12 @@ Public Class frmVentas
     End Sub
 
     Private Sub cbClientes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbClientes.SelectedIndexChanged
-        If cargando Then Return ' Evitar limpiar si es al iniciar
+        If cargando Then Return
 
-        dgvDetalleVenta.Rows.Clear()
-        totalGeneral = 0
-        lblTotalGeneral.Text = "Total: $0.00"
+        LimpiarFormulario()
     End Sub
 
     Private Sub ConfigurarGrilla()
-        ' Evitas columnas automáticas
         dgvDetalleVenta.AutoGenerateColumns = False
         dgvDetalleVenta.Columns.Clear()
 
@@ -32,30 +31,42 @@ Public Class frmVentas
         dgvDetalleVenta.Columns.Add("PrecioUnitario", "Precio Unitario")
         dgvDetalleVenta.Columns.Add("PrecioTotal", "Precio Total")
     End Sub
+
     Private Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAgregarProducto.Click
+        If cbProductos.SelectedItem Is Nothing Then
+            MessageBox.Show("Por favor, seleccioná un producto.")
+            Return
+        End If
+
+        If Not Integer.TryParse(txtCantidad.Text, Nothing) OrElse Val(txtCantidad.Text) <= 0 Then
+            MessageBox.Show("Ingresá una cantidad válida.")
+            Return
+        End If
+
         Dim productoSeleccionado As Producto = CType(cbProductos.SelectedItem, Producto)
         Dim cantidad As Integer = Integer.Parse(txtCantidad.Text)
         Dim precioUnitario As Decimal = productoSeleccionado.Precio
         Dim precioTotal As Decimal = cantidad * precioUnitario
 
-        ' Agregas una fila a la grilla
         dgvDetalleVenta.Rows.Add(productoSeleccionado.Id, productoSeleccionado.Nombre, cantidad, precioUnitario, precioTotal)
 
-        ' Sumas al total
         totalGeneral += precioTotal
         lblTotalGeneral.Text = "Total: $" & totalGeneral.ToString("0.00")
-
+        txtCantidad.Clear()
     End Sub
 
     Private Sub btnGuardarVenta_Click(sender As Object, e As EventArgs) Handles btnGuardarVenta.Click
-        ' Insertar en tabla "ventas"
+        If dgvDetalleVenta.Rows.Count = 0 Then
+            MessageBox.Show("No hay productos en la venta.")
+            Return
+        End If
+
         Dim idCliente As Integer = CType(cbClientes.SelectedItem, Cliente).Id
         Dim fechaVenta As DateTime = DateTime.Now
         Dim totalVenta As Decimal = totalGeneral
 
         Dim idVenta As Integer = negocioVentas.InsertarVenta(idCliente, fechaVenta, totalVenta)
 
-        ' Insertar los ítems en "ventasitems"
         For Each fila As DataGridViewRow In dgvDetalleVenta.Rows
             Dim idProducto As Integer = fila.Cells("IDProducto").Value
             Dim cantidad As Integer = fila.Cells("Cantidad").Value
@@ -64,16 +75,11 @@ Public Class frmVentas
 
             negocioVentas.InsertarItemVenta(idVenta, idProducto, precioUnitario, cantidad, precioTotal)
         Next
+
         MessageBox.Show("¡Venta guardada con éxito!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        ' Limpiar después de guardar
-        dgvDetalleVenta.Rows.Clear()
-        totalGeneral = 0
-        lblTotalGeneral.Text = "Total: $0.00"
-        txtCantidad.Clear()
-
-
+        LimpiarFormulario()
     End Sub
+
     Private Sub CargarClientes()
         Dim clienteNeg As New ClienteNegocio()
         Dim listaClientes As List(Of Cliente) = clienteNeg.listar()
@@ -82,6 +88,7 @@ Public Class frmVentas
         cbClientes.DisplayMember = "NombreCliente"
         cbClientes.ValueMember = "Id"
     End Sub
+
     Private Sub CargarProductos()
         Dim productoNeg As New ProductoNegocio()
         Dim listaProductos As List(Of Producto) = productoNeg.listar()
@@ -91,5 +98,11 @@ Public Class frmVentas
         cbProductos.ValueMember = "Id"
     End Sub
 
+    Private Sub LimpiarFormulario()
+        dgvDetalleVenta.Rows.Clear()
+        totalGeneral = 0
+        lblTotalGeneral.Text = "Total: $0.00"
+        txtCantidad.Clear()
+    End Sub
 
 End Class
