@@ -64,6 +64,14 @@ Public Class frmVentas
 
             negocioVentas.InsertarItemVenta(idVenta, idProducto, precioUnitario, cantidad, precioTotal)
         Next
+        MessageBox.Show("¡Venta guardada con éxito!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        ' Limpiar después de guardar
+        dgvDetalleVenta.Rows.Clear()
+        totalGeneral = 0
+        lblTotalGeneral.Text = "Total: $0.00"
+        txtCantidad.Clear()
+
 
     End Sub
     Private Sub CargarClientes()
