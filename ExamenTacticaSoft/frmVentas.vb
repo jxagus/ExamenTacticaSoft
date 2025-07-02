@@ -1,5 +1,5 @@
 ﻿Imports Dominio
-
+Imports Negocio
 Public Class frmVentas
     Private totalGeneral As Decimal = 0
     Private negocioVentas As New VentaNegocio()
