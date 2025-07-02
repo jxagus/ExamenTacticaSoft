@@ -1,0 +1,39 @@
+﻿Imports System.Data.SqlClient
+Imports Dominio
+Imports Negocio.Negocio
+
+Public Class VentaNegocio
+    Private acceso As New AccesoDatos()
+
+    Public Function InsertarVenta(idCliente As Integer, fecha As DateTime, total As Decimal) As Integer
+        Try
+            acceso.SetearConsulta("INSERT INTO ventas (IDCliente, Fecha, Total) VALUES (@idCliente, @fecha, @total); SELECT SCOPE_IDENTITY();")
+            acceso.SetearParametro("@idCliente", idCliente)
+            acceso.SetearParametro("@fecha", fecha)
+            acceso.SetearParametro("@total", total)
+            acceso.EjecutarLectura()
+
+            If acceso.LectorDatos.Read() Then
+                Return Convert.ToInt32(acceso.LectorDatos(0))
+            Else
+                Throw New Exception("No se pudo obtener el ID de la venta insertada.")
+            End If
+        Finally
+            acceso.CerrarConexion()
+        End Try
+    End Function
+
+    Public Sub InsertarItemVenta(idVenta As Integer, idProducto As Integer, precioUnitario As Decimal, cantidad As Integer, precioTotal As Decimal)
+        Try
+            acceso.SetearConsulta("INSERT INTO ventasitems (IDVenta, IDProducto, PrecioUnitario, Cantidad, PrecioTotal) VALUES (@idVenta, @idProducto, @precioUnitario, @cantidad, @precioTotal)")
+            acceso.SetearParametro("@idVenta", idVenta)
+            acceso.SetearParametro("@idProducto", idProducto)
+            acceso.SetearParametro("@precioUnitario", precioUnitario)
+            acceso.SetearParametro("@cantidad", cantidad)
+            acceso.SetearParametro("@precioTotal", precioTotal)
+            acceso.EjecutarAccion()
+        Finally
+            acceso.CerrarConexion()
+        End Try
+    End Sub
+End Class
