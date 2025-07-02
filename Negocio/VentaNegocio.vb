@@ -24,16 +24,23 @@ Public Class VentaNegocio
     End Function
 
     Public Sub InsertarItemVenta(idVenta As Integer, idProducto As Integer, precioUnitario As Decimal, cantidad As Integer, precioTotal As Decimal)
+        Dim acceso As New AccesoDatos()
         Try
-            acceso.SetearConsulta("INSERT INTO ventasitems (IDVenta, IDProducto, PrecioUnitario, Cantidad, PrecioTotal) VALUES (@idVenta, @idProducto, @precioUnitario, @cantidad, @precioTotal)")
+            acceso.SetearConsulta("INSERT INTO ventasitems (IDVenta, IDProducto, PrecioUnitario, Cantidad, PrecioTotal) 
+                               VALUES (@idVenta, @idProducto, @precioUnitario, @cantidad, @precioTotal)")
+
             acceso.SetearParametro("@idVenta", idVenta)
             acceso.SetearParametro("@idProducto", idProducto)
             acceso.SetearParametro("@precioUnitario", precioUnitario)
             acceso.SetearParametro("@cantidad", cantidad)
             acceso.SetearParametro("@precioTotal", precioTotal)
+
             acceso.EjecutarAccion()
+        Catch ex As Exception
+            Throw ex
         Finally
             acceso.CerrarConexion()
         End Try
     End Sub
+
 End Class
