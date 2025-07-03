@@ -17,7 +17,7 @@ Namespace Negocio
         End Sub
 
         Public Sub SetearConsulta(consulta As String) 'Tipo de comando y el texto SQL a ejecutar
-            comando.Parameters.Clear() 'Limpia todos los parametros anteriores
+            comando.Parameters.Clear() 'Limpia todos los parametros anteriores xd
             comando.CommandType = CommandType.Text
             comando.CommandText = consulta
         End Sub
@@ -32,7 +32,7 @@ Namespace Negocio
             End Try
         End Sub
 
-        Public Sub EjecutarAccion() 'Ejecuta una acción que no devuelve resultados (INSERT, UPDATE, DELETE)
+        Public Sub EjecutarAccion() 'Ejecuta una accion que no devuelve resultados (INSERT, UPDATE, DELETE)
             comando.Connection = conexion
             Try
                 conexion.Open()
