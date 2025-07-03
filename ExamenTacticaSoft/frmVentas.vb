@@ -6,6 +6,8 @@ Public Class frmVentas
     Private totalGeneral As Decimal = 0
     Private negocioVentas As New VentaNegocio()
     Private cargando As Boolean = False
+    Dim ventaValida As Boolean = False
+
 
     Private Sub frmVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cargando = True
@@ -41,6 +43,8 @@ Public Class frmVentas
         If Not Integer.TryParse(txtCantidad.Text, Nothing) OrElse Val(txtCantidad.Text) <= 0 Then
             MessageBox.Show("Ingresá una cantidad válida.")
             Return
+        Else
+            ventaValida = True
         End If
 
         Dim productoSeleccionado As Producto = CType(cbProductos.SelectedItem, Producto)
@@ -51,6 +55,10 @@ Public Class frmVentas
         dgvDetalleVenta.Rows.Add(productoSeleccionado.Id, productoSeleccionado.Nombre, cantidad, precioUnitario, precioTotal)
 
         totalGeneral += precioTotal
+        If dgvDetalleVenta.Rows.Count = 0 Then
+            MessageBox.Show("No hay productos en la venta.")
+            Return
+        End If
         lblTotalGeneral.Text = "Total: $" & totalGeneral.ToString("0.00")
         txtCantidad.Clear()
     End Sub
@@ -60,10 +68,7 @@ Public Class frmVentas
             MessageBox.Show("No hay productos en la venta.")
             Return
         End If
-        If Not Integer.TryParse(txtCantidad.Text, Nothing) OrElse Val(txtCantidad.Text) <= 0 Then
-            MessageBox.Show("Ingresá una cantidad válida.")
-            Return
-        End If
+
         Dim idCliente As Integer = CType(cbClientes.SelectedItem, Cliente).Id
         Dim fechaVenta As DateTime = DateTime.Now
         Dim totalVenta As Decimal = totalGeneral
@@ -78,9 +83,13 @@ Public Class frmVentas
 
             negocioVentas.InsertarItemVenta(idVenta, idProducto, precioUnitario, cantidad, precioTotal)
         Next
-
-        MessageBox.Show("¡Venta guardada con éxito!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        LimpiarFormulario()
+        If ventaValida = True Then
+            MessageBox.Show("¡Venta guardada con éxito!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ventaValida = False
+            LimpiarFormulario()
+        Else
+            MessageBox.Show("Error al guardar la venta. Por favor, intente nuevamente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
     Private Sub CargarClientes()

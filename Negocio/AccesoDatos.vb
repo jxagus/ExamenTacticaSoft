@@ -17,6 +17,7 @@ Namespace Negocio
         End Sub
 
         Public Sub SetearConsulta(consulta As String) 'Tipo de comando y el texto SQL a ejecutar
+            comando.Parameters.Clear() 'Limpia todos los parametros anteriores
             comando.CommandType = CommandType.Text
             comando.CommandText = consulta
         End Sub
