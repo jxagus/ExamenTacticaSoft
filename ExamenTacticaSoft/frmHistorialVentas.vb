@@ -61,13 +61,20 @@ Public Class frmHistorialVentas
         End If
 
         Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("IDVenta").Value)
-        Dim nuevaFecha As DateTime = DateTime.Now ' Podés usar un DateTimePicker si querés
-        Dim nuevoTotal As Decimal = 999.99D ' Acá deberías tomar el nuevo valor que quieras modificar
+        Dim fecha As Date = Date.Parse(dgvHistorial.CurrentRow.Cells("Fecha").Value.ToString())
+        Dim total As Decimal = Decimal.Parse(dgvHistorial.CurrentRow.Cells("Total").Value.ToString().Replace("$", ""))
 
-        Dim negocio As New VentaNegocio()
-        negocio.ModificarVenta(idVenta, nuevaFecha, nuevoTotal)
-        MessageBox.Show("Venta modificada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        CargarHistorial()
+        Dim ventaSeleccionada As New Venta With {
+            .Id = idVenta,
+            .Fecha = fecha,
+            .Total = total
+        }
+
+        Dim formModificar As New frmModificarVenta(ventaSeleccionada)
+        If formModificar.ShowDialog() = DialogResult.OK Then
+            CargarHistorial()
+        End If
     End Sub
+
 
 End Class
