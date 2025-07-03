@@ -24,6 +24,15 @@ Public Class frmProductos
             btnCol.UseColumnTextForButtonValue = True
             dgvProductos.Columns.Add(btnCol)
         End If
+        'Agregar boton para eliminar
+        If dgvProductos.Columns("btnEliminar") Is Nothing Then
+            Dim btnCol As New DataGridViewButtonColumn()
+            btnCol.Name = "btnElminar"
+            btnCol.HeaderText = "Acción-Eliminar"
+            btnCol.Text = "❌" 'Emoji cutie eliminador
+            btnCol.UseColumnTextForButtonValue = True
+            dgvProductos.Columns.Add(btnCol)
+        End If
     End Sub
 
 End Class

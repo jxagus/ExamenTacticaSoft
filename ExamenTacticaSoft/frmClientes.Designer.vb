@@ -25,7 +25,7 @@ Partial Class frmClientes
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCampo = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -48,27 +48,27 @@ Partial Class frmClientes
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(359, 409)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.Size = New System.Drawing.Size(32, 13)
         Me.Label3.TabIndex = 23
-        Me.Label3.Text = "Label3"
+        Me.Label3.Text = "Filtro:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(174, 409)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(42, 13)
         Me.Label2.TabIndex = 22
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "Criterio:"
         '
-        'Label1
+        'lblCampo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(10, 409)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 21
-        Me.Label1.Text = "Label1"
+        Me.lblCampo.AutoSize = True
+        Me.lblCampo.Location = New System.Drawing.Point(10, 409)
+        Me.lblCampo.Name = "lblCampo"
+        Me.lblCampo.Size = New System.Drawing.Size(43, 13)
+        Me.lblCampo.TabIndex = 21
+        Me.lblCampo.Text = "Campo:"
         '
         'ComboBox3
         '
@@ -127,7 +127,7 @@ Partial Class frmClientes
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClientes.Location = New System.Drawing.Point(12, 85)
         Me.dgvClientes.Name = "dgvClientes"
-        Me.dgvClientes.Size = New System.Drawing.Size(644, 301)
+        Me.dgvClientes.Size = New System.Drawing.Size(640, 301)
         Me.dgvClientes.TabIndex = 24
         '
         'frmClientes
@@ -140,7 +140,7 @@ Partial Class frmClientes
         Me.Controls.Add(Me.dgvClientes)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblCampo)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
@@ -156,7 +156,7 @@ Partial Class frmClientes
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblCampo As Label
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
