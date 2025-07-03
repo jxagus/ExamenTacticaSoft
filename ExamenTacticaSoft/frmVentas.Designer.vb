@@ -34,6 +34,7 @@ Partial Class frmVentas
         Me.lblTotalGeneral = New System.Windows.Forms.Label()
         Me.btnGuardarVenta = New System.Windows.Forms.Button()
         Me.btnHistorial = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dgvDetalleVenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -111,7 +112,7 @@ Partial Class frmVentas
         Me.dgvDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDetalleVenta.Location = New System.Drawing.Point(225, 110)
         Me.dgvDetalleVenta.Name = "dgvDetalleVenta"
-        Me.dgvDetalleVenta.Size = New System.Drawing.Size(416, 261)
+        Me.dgvDetalleVenta.Size = New System.Drawing.Size(439, 261)
         Me.dgvDetalleVenta.TabIndex = 51
         '
         'lblTotalGeneral
@@ -138,14 +139,24 @@ Partial Class frmVentas
         Me.btnHistorial.Name = "btnHistorial"
         Me.btnHistorial.Size = New System.Drawing.Size(75, 261)
         Me.btnHistorial.TabIndex = 54
-        Me.btnHistorial.Text = "Historial"
+        Me.btnHistorial.Text = "Historial del cliente"
         Me.btnHistorial.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(222, 94)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 13)
+        Me.Label1.TabIndex = 55
+        Me.Label1.Text = "Alta de ventas"
         '
         'frmVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(775, 439)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnHistorial)
         Me.Controls.Add(Me.btnGuardarVenta)
         Me.Controls.Add(Me.lblTotalGeneral)
@@ -178,4 +189,5 @@ Partial Class frmVentas
     Friend WithEvents lblTotalGeneral As Label
     Friend WithEvents btnGuardarVenta As Button
     Friend WithEvents btnHistorial As Button
+    Friend WithEvents Label1 As Label
 End Class

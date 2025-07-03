@@ -60,7 +60,10 @@ Public Class frmVentas
             MessageBox.Show("No hay productos en la venta.")
             Return
         End If
-
+        If Not Integer.TryParse(txtCantidad.Text, Nothing) OrElse Val(txtCantidad.Text) <= 0 Then
+            MessageBox.Show("Ingresá una cantidad válida.")
+            Return
+        End If
         Dim idCliente As Integer = CType(cbClientes.SelectedItem, Cliente).Id
         Dim fechaVenta As DateTime = DateTime.Now
         Dim totalVenta As Decimal = totalGeneral
