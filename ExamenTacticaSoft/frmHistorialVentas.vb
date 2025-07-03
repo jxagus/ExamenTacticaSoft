@@ -54,4 +54,20 @@ Public Class frmHistorialVentas
         End If
     End Sub
 
+    Private Sub btnModificarHistorial_Click(sender As Object, e As EventArgs) Handles btnModificarHistorial.Click
+        If dgvHistorial.CurrentRow Is Nothing Then
+            MessageBox.Show("Seleccioná una venta para modificar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("ID").Value)
+        Dim nuevaFecha As DateTime = DateTime.Now ' Podés usar un DateTimePicker si querés
+        Dim nuevoTotal As Decimal = 999.99D ' Acá deberías tomar el nuevo valor que quieras modificar
+
+        Dim negocio As New VentaNegocio()
+        negocio.ModificarVenta(idVenta, nuevaFecha, nuevoTotal)
+        MessageBox.Show("Venta modificada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        CargarHistorial()
+    End Sub
+
 End Class
