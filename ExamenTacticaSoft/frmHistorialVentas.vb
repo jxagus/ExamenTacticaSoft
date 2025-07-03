@@ -43,7 +43,7 @@ Public Class frmHistorialVentas
             Return
         End If
 
-        Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("ID").Value)
+        Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("IdVenta").Value)
         Dim confirm As DialogResult = MessageBox.Show("¿Estás seguro que querés eliminar esta venta?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If confirm = DialogResult.Yes Then
