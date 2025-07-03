@@ -32,7 +32,7 @@ Partial Class frmModificarVenta
         'lblFecha
         '
         Me.lblFecha.AutoSize = True
-        Me.lblFecha.Location = New System.Drawing.Point(51, 69)
+        Me.lblFecha.Location = New System.Drawing.Point(132, 69)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(37, 13)
         Me.lblFecha.TabIndex = 0
@@ -48,24 +48,24 @@ Partial Class frmModificarVenta
         'Total
         '
         Me.Total.AutoSize = True
-        Me.Total.Location = New System.Drawing.Point(51, 152)
+        Me.Total.Location = New System.Drawing.Point(132, 153)
         Me.Total.Name = "Total"
-        Me.Total.Size = New System.Drawing.Size(41, 13)
+        Me.Total.Size = New System.Drawing.Size(37, 13)
         Me.Total.TabIndex = 2
-        Me.Total.Text = "lblTotal"
+        Me.Total.Text = "Monto"
         '
         'txtTotal
         '
         Me.txtTotal.Location = New System.Drawing.Point(51, 184)
         Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotal.Size = New System.Drawing.Size(201, 20)
         Me.txtTotal.TabIndex = 3
         '
         'btnGuardarCambios
         '
         Me.btnGuardarCambios.Location = New System.Drawing.Point(51, 229)
         Me.btnGuardarCambios.Name = "btnGuardarCambios"
-        Me.btnGuardarCambios.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardarCambios.Size = New System.Drawing.Size(201, 23)
         Me.btnGuardarCambios.TabIndex = 4
         Me.btnGuardarCambios.Text = "Guardar cambios"
         Me.btnGuardarCambios.UseVisualStyleBackColor = True
@@ -81,6 +81,7 @@ Partial Class frmModificarVenta
         Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.lblFecha)
         Me.Name = "frmModificarVenta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmModificarVenta"
         Me.ResumeLayout(False)
         Me.PerformLayout()
