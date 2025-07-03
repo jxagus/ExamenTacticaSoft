@@ -43,7 +43,7 @@ Public Class frmHistorialVentas
             Return
         End If
 
-        Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("IdVenta").Value)
+        Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("IDVenta").Value)
         Dim confirm As DialogResult = MessageBox.Show("¿Estás seguro que querés eliminar esta venta?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If confirm = DialogResult.Yes Then
@@ -60,7 +60,7 @@ Public Class frmHistorialVentas
             Return
         End If
 
-        Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("ID").Value)
+        Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("IDVenta").Value)
         Dim nuevaFecha As DateTime = DateTime.Now ' Podés usar un DateTimePicker si querés
         Dim nuevoTotal As Decimal = 999.99D ' Acá deberías tomar el nuevo valor que quieras modificar
 
