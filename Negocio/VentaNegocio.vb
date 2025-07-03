@@ -97,5 +97,26 @@ Public Class VentaNegocio
             datos.CerrarConexion()
         End Try
     End Function
-
+    Public Sub EliminarVenta(idVenta As Integer)
+        Dim datos As New AccesoDatos()
+        Try
+            datos.SetearConsulta("DELETE FROM ventasitems WHERE IDVenta = @idVenta; DELETE FROM ventas WHERE ID = @idVenta")
+            datos.SetearParametro("@idVenta", idVenta)
+            datos.EjecutarAccion()
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+    Public Sub ModificarVenta(idVenta As Integer, nuevaFecha As DateTime, nuevoTotal As Decimal)
+        Dim datos As New AccesoDatos()
+        Try
+            datos.SetearConsulta("UPDATE ventas SET Fecha = @fecha, Total = @total WHERE ID = @idVenta")
+            datos.SetearParametro("@fecha", nuevaFecha)
+            datos.SetearParametro("@total", nuevoTotal)
+            datos.SetearParametro("@idVenta", idVenta)
+            datos.EjecutarAccion()
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 End Class

@@ -37,5 +37,21 @@ Public Class frmHistorialVentas
         Next
     End Sub
 
+    Private Sub btnEliminarHistorial_Click(sender As Object, e As EventArgs) Handles btnEliminarHistorial.Click
+        If dgvHistorial.CurrentRow Is Nothing Then
+            MessageBox.Show("Seleccioná una venta para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("ID").Value)
+        Dim confirm As DialogResult = MessageBox.Show("¿Estás seguro que querés eliminar esta venta?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If confirm = DialogResult.Yes Then
+            Dim negocio As New VentaNegocio()
+            negocio.EliminarVenta(idVenta)
+            MessageBox.Show("Venta eliminada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            CargarHistorial() ' Re-cargá el dgv
+        End If
+    End Sub
 
 End Class

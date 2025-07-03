@@ -24,6 +24,8 @@ Partial Class frmHistorialVentas
     Private Sub InitializeComponent()
         Me.lblHistorial = New System.Windows.Forms.Label()
         Me.dgvHistorial = New System.Windows.Forms.DataGridView()
+        Me.btnModificarHistorial = New System.Windows.Forms.Button()
+        Me.btnEliminarHistorial = New System.Windows.Forms.Button()
         CType(Me.dgvHistorial, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,16 +42,36 @@ Partial Class frmHistorialVentas
         'dgvHistorial
         '
         Me.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHistorial.Location = New System.Drawing.Point(71, 99)
+        Me.dgvHistorial.Location = New System.Drawing.Point(69, 138)
         Me.dgvHistorial.Name = "dgvHistorial"
         Me.dgvHistorial.Size = New System.Drawing.Size(626, 219)
         Me.dgvHistorial.TabIndex = 44
+        '
+        'btnModificarHistorial
+        '
+        Me.btnModificarHistorial.Location = New System.Drawing.Point(69, 109)
+        Me.btnModificarHistorial.Name = "btnModificarHistorial"
+        Me.btnModificarHistorial.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificarHistorial.TabIndex = 45
+        Me.btnModificarHistorial.Text = "Modificar"
+        Me.btnModificarHistorial.UseVisualStyleBackColor = True
+        '
+        'btnEliminarHistorial
+        '
+        Me.btnEliminarHistorial.Location = New System.Drawing.Point(150, 109)
+        Me.btnEliminarHistorial.Name = "btnEliminarHistorial"
+        Me.btnEliminarHistorial.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminarHistorial.TabIndex = 46
+        Me.btnEliminarHistorial.Text = "Eliminar"
+        Me.btnEliminarHistorial.UseVisualStyleBackColor = True
         '
         'frmHistorialVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(761, 460)
+        Me.Controls.Add(Me.btnEliminarHistorial)
+        Me.Controls.Add(Me.btnModificarHistorial)
         Me.Controls.Add(Me.dgvHistorial)
         Me.Controls.Add(Me.lblHistorial)
         Me.Name = "frmHistorialVentas"
@@ -62,4 +84,6 @@ Partial Class frmHistorialVentas
 
     Friend WithEvents lblHistorial As Label
     Friend WithEvents dgvHistorial As DataGridView
+    Friend WithEvents btnModificarHistorial As Button
+    Friend WithEvents btnEliminarHistorial As Button
 End Class
