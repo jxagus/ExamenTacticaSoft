@@ -29,7 +29,6 @@ Partial Class frmClientes
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblFiltroRapido = New System.Windows.Forms.Label()
         Me.lblClientes = New System.Windows.Forms.Label()
@@ -95,15 +94,6 @@ Partial Class frmClientes
         Me.ComboBox1.Size = New System.Drawing.Size(102, 21)
         Me.ComboBox1.TabIndex = 18
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(695, 404)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 17
-        Me.Button3.Text = "Eliminar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(614, 404)
@@ -137,7 +127,7 @@ Partial Class frmClientes
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClientes.Location = New System.Drawing.Point(12, 85)
         Me.dgvClientes.Name = "dgvClientes"
-        Me.dgvClientes.Size = New System.Drawing.Size(540, 301)
+        Me.dgvClientes.Size = New System.Drawing.Size(644, 301)
         Me.dgvClientes.TabIndex = 24
         '
         'frmClientes
@@ -154,7 +144,6 @@ Partial Class frmClientes
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblFiltroRapido)
         Me.Name = "frmClientes"
@@ -171,7 +160,6 @@ Partial Class frmClientes
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents lblFiltroRapido As Label
     Friend WithEvents lblClientes As Label
