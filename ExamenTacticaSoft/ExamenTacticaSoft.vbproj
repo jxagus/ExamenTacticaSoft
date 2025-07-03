@@ -94,6 +94,12 @@
     <Compile Include="frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmModificarVenta.Designer.vb">
+      <DependentUpon>frmModificarVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmProductos.Designer.vb">
       <DependentUpon>frmProductos.vb</DependentUpon>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.zu-ZA.resx">
       <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarVenta.resx">
+      <DependentUpon>frmModificarVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.vb</DependentUpon>
