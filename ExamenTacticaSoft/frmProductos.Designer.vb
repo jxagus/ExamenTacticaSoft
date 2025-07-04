@@ -22,27 +22,26 @@ Partial Class frmProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtFiltroRapido = New System.Windows.Forms.TextBox()
         Me.lblFiltroRapido = New System.Windows.Forms.Label()
         Me.lbltitulo = New System.Windows.Forms.Label()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblCampo = New System.Windows.Forms.Label()
+        Me.cbCriterio = New System.Windows.Forms.ComboBox()
+        Me.cbCampo = New System.Windows.Forms.ComboBox()
+        Me.txtFiltro = New System.Windows.Forms.TextBox()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtFiltroRapido
         '
-        Me.TextBox1.Location = New System.Drawing.Point(81, 54)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 38
+        Me.txtFiltroRapido.Location = New System.Drawing.Point(81, 54)
+        Me.txtFiltroRapido.Name = "txtFiltroRapido"
+        Me.txtFiltroRapido.Size = New System.Drawing.Size(100, 20)
+        Me.txtFiltroRapido.TabIndex = 38
         '
         'lblFiltroRapido
         '
@@ -71,91 +70,80 @@ Partial Class frmProductos
         Me.dgvProductos.Size = New System.Drawing.Size(637, 300)
         Me.dgvProductos.TabIndex = 41
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(351, 405)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 47
-        Me.Label3.Text = "Label3"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(166, 405)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 46
-        Me.Label2.Text = "Label2"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(2, 405)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 45
-        Me.Label1.Text = "Label1"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(396, 402)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(80, 21)
-        Me.ComboBox3.TabIndex = 44
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(211, 402)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(134, 21)
-        Me.ComboBox2.TabIndex = 43
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(47, 402)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(102, 21)
-        Me.ComboBox1.TabIndex = 42
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(674, 410)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 50
-        Me.Button3.Text = "Eliminar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(593, 410)
+        Me.Button1.Location = New System.Drawing.Point(574, 405)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 48
         Me.Button1.Text = "Agregar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(363, 410)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(32, 13)
+        Me.Label3.TabIndex = 54
+        Me.Label3.Text = "Filtro:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(178, 410)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(42, 13)
+        Me.Label2.TabIndex = 53
+        Me.Label2.Text = "Criterio:"
+        '
+        'lblCampo
+        '
+        Me.lblCampo.AutoSize = True
+        Me.lblCampo.Location = New System.Drawing.Point(14, 410)
+        Me.lblCampo.Name = "lblCampo"
+        Me.lblCampo.Size = New System.Drawing.Size(43, 13)
+        Me.lblCampo.TabIndex = 52
+        Me.lblCampo.Text = "Campo:"
+        '
+        'cbCriterio
+        '
+        Me.cbCriterio.FormattingEnabled = True
+        Me.cbCriterio.Location = New System.Drawing.Point(223, 407)
+        Me.cbCriterio.Name = "cbCriterio"
+        Me.cbCriterio.Size = New System.Drawing.Size(134, 21)
+        Me.cbCriterio.TabIndex = 50
+        '
+        'cbCampo
+        '
+        Me.cbCampo.FormattingEnabled = True
+        Me.cbCampo.Location = New System.Drawing.Point(59, 407)
+        Me.cbCampo.Name = "cbCampo"
+        Me.cbCampo.Size = New System.Drawing.Size(102, 21)
+        Me.cbCampo.TabIndex = 49
+        '
+        'txtFiltro
+        '
+        Me.txtFiltro.Location = New System.Drawing.Point(401, 408)
+        Me.txtFiltro.Name = "txtFiltro"
+        Me.txtFiltro.Size = New System.Drawing.Size(100, 20)
+        Me.txtFiltro.TabIndex = 55
+        '
         'frmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.txtFiltro)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.lblCampo)
+        Me.Controls.Add(Me.cbCriterio)
+        Me.Controls.Add(Me.cbCampo)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgvProductos)
         Me.Controls.Add(Me.lbltitulo)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtFiltroRapido)
         Me.Controls.Add(Me.lblFiltroRapido)
         Me.Name = "frmProductos"
         Me.Text = "frmProductos"
@@ -164,16 +152,15 @@ Partial Class frmProductos
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtFiltroRapido As TextBox
     Friend WithEvents lblFiltroRapido As Label
     Friend WithEvents lbltitulo As Label
     Friend WithEvents dgvProductos As DataGridView
+    Friend WithEvents Button1 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents lblCampo As Label
+    Friend WithEvents cbCriterio As ComboBox
+    Friend WithEvents cbCampo As ComboBox
+    Friend WithEvents txtFiltro As TextBox
 End Class

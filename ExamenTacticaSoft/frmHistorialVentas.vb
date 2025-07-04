@@ -61,7 +61,7 @@ Public Class frmHistorialVentas
         End If
 
         Dim idVenta As Integer = CInt(dgvHistorial.CurrentRow.Cells("IDVenta").Value)
-        Dim fecha As Date = Date.Parse(dgvHistorial.CurrentRow.Cells("Fecha").Value.ToString())
+        Dim fecha As Date = Date.Parse(dgvHistorial.CurrentRow.Cells("Fecha").Value.ToString()) 'modificar cuando no hay historial
         Dim total As Decimal = Decimal.Parse(dgvHistorial.CurrentRow.Cells("Total").Value.ToString().Replace("$", ""))
 
         Dim ventaSeleccionada As New Venta With {
