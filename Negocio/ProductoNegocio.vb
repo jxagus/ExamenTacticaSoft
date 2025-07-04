@@ -80,4 +80,61 @@ Public Class ProductoNegocio
             acceso.CerrarConexion()
         End Try
     End Sub
+    'FILTRAR
+    Public Function Filtrar(campo As String, criterio As String, filtro As String) As List(Of Producto)
+        Dim lista As New List(Of Producto)
+        Dim datos As New AccesoDatos()
+
+        Try
+            Dim consulta As String = "SELECT ID, Nombre, Precio, Categoria FROM productos WHERE "
+
+            If campo = "Precio" Then
+                Select Case criterio
+                    Case "Mayor a"
+                        consulta += "Precio > " & filtro
+                    Case "Menor a"
+                        consulta += "Precio < " & filtro
+                    Case "Igual a"
+                        consulta += "Precio = " & filtro
+                End Select
+            ElseIf campo = "Nombre" Then
+                Select Case criterio
+                    Case "Comienza con"
+                        consulta += "Nombre LIKE '" & filtro & "%'"
+                    Case "Termina con"
+                        consulta += "Nombre LIKE '%" & filtro & "'"
+                    Case "Contiene"
+                        consulta += "Nombre LIKE '%" & filtro & "%'"
+                End Select
+            ElseIf campo = "Categoría" Then
+                Select Case criterio
+                    Case "Comienza con"
+                        consulta += "Categoria LIKE '" & filtro & "%'"
+                    Case "Termina con"
+                        consulta += "Categoria LIKE '%" & filtro & "'"
+                    Case "Contiene"
+                        consulta += "Categoria LIKE '%" & filtro & "%'"
+                End Select
+            End If
+
+            datos.SetearConsulta(consulta)
+            datos.EjecutarLectura()
+
+            While datos.LectorDatos.Read()
+                Dim p As New Producto()
+                p.Id = datos.LectorDatos("ID")
+                p.Nombre = datos.LectorDatos("Nombre")
+                p.Precio = Convert.ToDecimal(datos.LectorDatos("Precio"))
+                p.Categoria = datos.LectorDatos("Categoria").ToString()
+                lista.Add(p)
+            End While
+
+            Return lista
+        Catch ex As Exception
+            Throw
+        Finally
+            datos.CerrarConexion()
+        End Try
+    End Function
+
 End Class

@@ -15,24 +15,85 @@ Public Class frmProductos
         Dim negocio As New ProductoNegocio()
         dgvProductos.AutoGenerateColumns = True
         dgvProductos.DataSource = negocio.listar()
-        'Agregar boton para modificar
-        If dgvProductos.Columns("btnModificar") Is Nothing Then
-            Dim btnCol As New DataGridViewButtonColumn()
-            btnCol.Name = "btnModificar"
-            btnCol.HeaderText = "Acción-Modificar"
-            btnCol.Text = "✍️" 'Emoji cutie
-            btnCol.UseColumnTextForButtonValue = True
-            dgvProductos.Columns.Add(btnCol)
+        cbCampo.Items.Add("Nombre")
+        cbCampo.Items.Add("Precio")
+        cbCampo.Items.Add("Categoría")
+        AgregarBotonesAccion()
+    End Sub
+    Private Sub AgregarBotonesAccion()
+        ' Asegurarse que los botones estén al final
+        ' Primero, eliminar si ya existen para que no se repitan o se reposicionen mal
+        If dgvProductos.Columns.Contains("btnModificar") Then dgvProductos.Columns.Remove("btnModificar")
+        If dgvProductos.Columns.Contains("btnEliminar") Then dgvProductos.Columns.Remove("btnEliminar")
+
+        ' Botón Modificar
+        Dim btnModificar As New DataGridViewButtonColumn()
+        btnModificar.Name = "btnModificar"
+        btnModificar.HeaderText = "Modificar"
+        btnModificar.Text = "✍️"
+        btnModificar.UseColumnTextForButtonValue = True
+        dgvProductos.Columns.Add(btnModificar)
+
+        ' Botón Eliminar
+        Dim btnEliminar As New DataGridViewButtonColumn()
+        btnEliminar.Name = "btnEliminar"
+        btnEliminar.HeaderText = "Eliminar"
+        btnEliminar.Text = "❌"
+        btnEliminar.UseColumnTextForButtonValue = True
+        dgvProductos.Columns.Add(btnEliminar)
+    End Sub
+
+    Private Sub cbCampo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCampo.SelectedIndexChanged
+        cbCriterio.Items.Clear()
+
+        Select Case cbCampo.SelectedItem.ToString()
+            Case "Precio"
+                cbCriterio.Items.Add("Mayor a")
+                cbCriterio.Items.Add("Menor a")
+                cbCriterio.Items.Add("Igual a")
+            Case Else
+                cbCriterio.Items.Add("Comienza con")
+                cbCriterio.Items.Add("Termina con")
+                cbCriterio.Items.Add("Contiene")
+        End Select
+    End Sub
+    Private Sub AplicarFiltro()
+        Dim negocio As New ProductoNegocio()
+
+        ' Si el filtro está vacío, mostrar todo
+        If txtFiltro.Text.Trim() = "" Then
+            Dim listaCompleta As List(Of Producto) = negocio.listar()
+            dgvProductos.DataSource = Nothing
+            dgvProductos.DataSource = listaCompleta
+            Return
         End If
-        'Agregar boton para eliminar
-        If dgvProductos.Columns("btnEliminar") Is Nothing Then
-            Dim btnCol As New DataGridViewButtonColumn()
-            btnCol.Name = "btnElminar"
-            btnCol.HeaderText = "Acción-Eliminar"
-            btnCol.Text = "❌" 'Emoji cutie eliminador
-            btnCol.UseColumnTextForButtonValue = True
-            dgvProductos.Columns.Add(btnCol)
+
+        ' Si los combos no están seleccionados, aviso
+        If cbCampo.SelectedIndex < 0 Or cbCriterio.SelectedIndex < 0 Then
+            MessageBox.Show("Completá los filtros.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        Dim campo As String = cbCampo.SelectedItem.ToString()
+        Dim criterio As String = cbCriterio.SelectedItem.ToString()
+        Dim filtro As String = txtFiltro.Text.Trim()
+
+        Dim listaFiltrada As List(Of Producto) = negocio.Filtrar(campo, criterio, filtro)
+        dgvProductos.DataSource = Nothing
+        dgvProductos.DataSource = listaFiltrada
+        AgregarBotonesAccion()
+
+    End Sub
+
+
+    Private Sub txtFiltro_KeyDown(sender As Object, e As KeyEventArgs) Handles txtFiltro.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            AplicarFiltro()
+            e.SuppressKeyPress = True ' Evita el beep al presionar Enter
+            AgregarBotonesAccion()
+
         End If
     End Sub
+
 
 End Class
