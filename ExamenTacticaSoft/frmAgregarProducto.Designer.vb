@@ -25,11 +25,10 @@ Partial Class frmAgregarProducto
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.cbCategoria = New System.Windows.Forms.ComboBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.lblTitulo = New System.Windows.Forms.Label()
         Me.tbNombre = New System.Windows.Forms.TextBox()
         Me.tbPrecio = New System.Windows.Forms.TextBox()
+        Me.tbCategoria = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -59,14 +58,6 @@ Partial Class frmAgregarProducto
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Categoria:"
         '
-        'cbCategoria
-        '
-        Me.cbCategoria.FormattingEnabled = True
-        Me.cbCategoria.Location = New System.Drawing.Point(108, 191)
-        Me.cbCategoria.Name = "cbCategoria"
-        Me.cbCategoria.Size = New System.Drawing.Size(121, 21)
-        Me.cbCategoria.TabIndex = 3
-        '
         'btnAgregar
         '
         Me.btnAgregar.Location = New System.Drawing.Point(82, 258)
@@ -75,16 +66,6 @@ Partial Class frmAgregarProducto
         Me.btnAgregar.TabIndex = 4
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
-        '
-        'lblTitulo
-        '
-        Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.Location = New System.Drawing.Point(36, 42)
-        Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(213, 25)
-        Me.lblTitulo.TabIndex = 5
-        Me.lblTitulo.Text = "Agregue un producto"
         '
         'tbNombre
         '
@@ -100,16 +81,22 @@ Partial Class frmAgregarProducto
         Me.tbPrecio.Size = New System.Drawing.Size(100, 20)
         Me.tbPrecio.TabIndex = 7
         '
+        'tbCategoria
+        '
+        Me.tbCategoria.Location = New System.Drawing.Point(108, 188)
+        Me.tbCategoria.Name = "tbCategoria"
+        Me.tbCategoria.Size = New System.Drawing.Size(100, 20)
+        Me.tbCategoria.TabIndex = 8
+        '
         'frmAgregarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(286, 393)
+        Me.ClientSize = New System.Drawing.Size(273, 342)
+        Me.Controls.Add(Me.tbCategoria)
         Me.Controls.Add(Me.tbPrecio)
         Me.Controls.Add(Me.tbNombre)
-        Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.btnAgregar)
-        Me.Controls.Add(Me.cbCategoria)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -124,9 +111,8 @@ Partial Class frmAgregarProducto
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents cbCategoria As ComboBox
     Friend WithEvents btnAgregar As Button
-    Friend WithEvents lblTitulo As Label
     Friend WithEvents tbNombre As TextBox
     Friend WithEvents tbPrecio As TextBox
+    Friend WithEvents tbCategoria As TextBox
 End Class

@@ -95,5 +95,27 @@ Public Class frmProductos
         End If
     End Sub
 
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Dim formAgregar As New frmAgregarProducto()
+        If formAgregar.ShowDialog() = DialogResult.OK Then
+            ' Refrescar la grilla después de agregar
+            Dim negocio As New ProductoNegocio()
+            dgvProductos.DataSource = negocio.listar()
+            AgregarBotonesAccion()
+
+        End If
+    End Sub
+    'para modificar
+    Private Sub dgvProductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellContentClick
+        If e.ColumnIndex = dgvProductos.Columns("btnModificar").Index Then
+            Dim productoSeleccionado As Producto = CType(dgvProductos.Rows(e.RowIndex).DataBoundItem, Producto)
+            Dim frmModif As New frmAgregarProducto()
+            frmModif.ProductoParaModificar = productoSeleccionado
+            If frmModif.ShowDialog() = DialogResult.OK Then
+                dgvProductos.DataSource = New ProductoNegocio().listar()
+                AgregarBotonesAccion()
+            End If
+        End If
+    End Sub
 
 End Class
