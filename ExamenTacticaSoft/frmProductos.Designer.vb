@@ -26,13 +26,14 @@ Partial Class frmProductos
         Me.lblFiltroRapido = New System.Windows.Forms.Label()
         Me.lbltitulo = New System.Windows.Forms.Label()
         Me.dgvProductos = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblCampo = New System.Windows.Forms.Label()
         Me.cbCriterio = New System.Windows.Forms.ComboBox()
         Me.cbCampo = New System.Windows.Forms.ComboBox()
         Me.txtFiltro = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -70,14 +71,14 @@ Partial Class frmProductos
         Me.dgvProductos.Size = New System.Drawing.Size(637, 300)
         Me.dgvProductos.TabIndex = 41
         '
-        'Button1
+        'btnAgregar
         '
-        Me.Button1.Location = New System.Drawing.Point(574, 405)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 48
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAgregar.Location = New System.Drawing.Point(688, 150)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(108, 56)
+        Me.btnAgregar.TabIndex = 48
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -129,18 +130,28 @@ Partial Class frmProductos
         Me.txtFiltro.Size = New System.Drawing.Size(100, 20)
         Me.txtFiltro.TabIndex = 55
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(655, 121)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(176, 13)
+        Me.Label1.TabIndex = 56
+        Me.Label1.Text = "Desea agregar un nuevo producto?"
+        '
         'frmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(837, 450)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtFiltro)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblCampo)
         Me.Controls.Add(Me.cbCriterio)
         Me.Controls.Add(Me.cbCampo)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvProductos)
         Me.Controls.Add(Me.lbltitulo)
         Me.Controls.Add(Me.txtFiltroRapido)
@@ -156,11 +167,12 @@ Partial Class frmProductos
     Friend WithEvents lblFiltroRapido As Label
     Friend WithEvents lbltitulo As Label
     Friend WithEvents dgvProductos As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAgregar As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents lblCampo As Label
     Friend WithEvents cbCriterio As ComboBox
     Friend WithEvents cbCampo As ComboBox
     Friend WithEvents txtFiltro As TextBox
+    Friend WithEvents Label1 As Label
 End Class
