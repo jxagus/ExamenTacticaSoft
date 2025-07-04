@@ -119,4 +119,25 @@ Public Class VentaNegocio
             Throw ex
         End Try
     End Sub
+    'TIENE VENTAS?
+    Public Function TieneVentasCliente(idCliente As Integer) As Boolean
+        Dim datos As New AccesoDatos()
+        Try
+            datos.SetearConsulta("SELECT COUNT(*) FROM ventas WHERE IdCliente = @idCliente")
+            datos.SetearParametro("@idCliente", idCliente)
+            datos.EjecutarLectura()
+
+            If datos.LectorDatos.Read() Then
+                Dim cantidad As Integer = Convert.ToInt32(datos.LectorDatos(0))
+                Return cantidad > 0
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Throw
+        Finally
+            datos.CerrarConexion()
+        End Try
+    End Function
+
 End Class

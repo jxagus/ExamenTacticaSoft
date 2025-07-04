@@ -120,8 +120,17 @@ Public Class frmVentas
     Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
         If cbClientes.SelectedItem IsNot Nothing Then
             Dim clienteSeleccionado As Cliente = CType(cbClientes.SelectedItem, Cliente)
-            Dim frm As New frmHistorialVentas(clienteSeleccionado)
-            frm.ShowDialog()
+            Dim negocioVentas As New VentaNegocio()
+
+            If negocioVentas.TieneVentasCliente(clienteSeleccionado.Id) Then
+                Dim frm As New frmHistorialVentas(clienteSeleccionado)
+                frm.ShowDialog()
+            Else
+                MessageBox.Show("El cliente no tiene ventas registradas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Else
+            MessageBox.Show("Seleccione un cliente para ver su historial.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
+
 End Class
