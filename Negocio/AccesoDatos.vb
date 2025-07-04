@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Configuration
 
 Namespace Negocio
     Public Class AccesoDatos 'Conexion a base de datos SQL Server con Ado.NET
@@ -11,10 +12,12 @@ Namespace Negocio
                 Return lector
             End Get
         End Property
-        Public Sub New() 'Constructor: inicializa la conexion y el comando
-            conexion = New SqlConnection("server=.\SQLEXPRESS; database=pruebademo; integrated security=true")
+        Public Sub New()
+            Dim cadenaConexion As String = ConfigurationManager.ConnectionStrings("MiConexion").ConnectionString
+            conexion = New SqlConnection(cadenaConexion)
             comando = New SqlCommand()
         End Sub
+
 
         Public Sub SetearConsulta(consulta As String) 'Tipo de comando y el texto SQL a ejecutar
             comando.Parameters.Clear() 'Limpia todos los parametros anteriores xd
