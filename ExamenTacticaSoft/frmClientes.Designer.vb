@@ -33,6 +33,8 @@ Partial Class frmClientes
         Me.lblFiltroRapido = New System.Windows.Forms.Label()
         Me.lblClientes = New System.Windows.Forms.Label()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -130,11 +132,31 @@ Partial Class frmClientes
         Me.dgvClientes.Size = New System.Drawing.Size(640, 301)
         Me.dgvClientes.TabIndex = 24
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(687, 166)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(165, 13)
+        Me.Label1.TabIndex = 58
+        Me.Label1.Text = "Desea agregar un nuevo cliente?"
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(720, 182)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(108, 56)
+        Me.btnAgregar.TabIndex = 57
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(861, 450)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.lblClientes)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.dgvClientes)
@@ -164,4 +186,6 @@ Partial Class frmClientes
     Friend WithEvents lblFiltroRapido As Label
     Friend WithEvents lblClientes As Label
     Friend WithEvents dgvClientes As DataGridView
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnAgregar As Button
 End Class

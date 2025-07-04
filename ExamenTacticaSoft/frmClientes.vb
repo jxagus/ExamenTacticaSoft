@@ -22,7 +22,7 @@ Public Class frmClientes
         If dgvClientes.Columns("btnModificar") Is Nothing Then
             Dim btnCol As New DataGridViewButtonColumn()
             btnCol.Name = "btnModificar"
-            btnCol.HeaderText = "Acción-Modificar"
+            btnCol.HeaderText = "Modificar"
             btnCol.Text = "✍️" 'Emoji cutie
             btnCol.UseColumnTextForButtonValue = True
             dgvClientes.Columns.Add(btnCol)
@@ -31,7 +31,7 @@ Public Class frmClientes
         If dgvClientes.Columns("btnEliminar") Is Nothing Then
             Dim btnCol As New DataGridViewButtonColumn()
             btnCol.Name = "btnElminar"
-            btnCol.HeaderText = "Acción-Eliminar"
+            btnCol.HeaderText = "Eliminar"
             btnCol.Text = "❌" 'Emoji cutie eliminador
             btnCol.UseColumnTextForButtonValue = True
             dgvClientes.Columns.Add(btnCol)
@@ -39,6 +39,14 @@ Public Class frmClientes
     End Sub
 
     Private Sub dgvClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellContentClick
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
 
     End Sub
 End Class

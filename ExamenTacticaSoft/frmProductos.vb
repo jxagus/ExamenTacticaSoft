@@ -107,15 +107,42 @@ Public Class frmProductos
     End Sub
     'para modificar
     Private Sub dgvProductos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProductos.CellContentClick
-        If e.ColumnIndex = dgvProductos.Columns("btnModificar").Index Then
-            Dim productoSeleccionado As Producto = CType(dgvProductos.Rows(e.RowIndex).DataBoundItem, Producto)
+        If e.RowIndex < 0 OrElse dgvProductos.Rows(e.RowIndex).IsNewRow Then Exit Sub
+
+        Dim fila As DataGridViewRow = dgvProductos.Rows(e.RowIndex)
+        If fila.DataBoundItem Is Nothing Then Exit Sub
+
+        Dim productoSeleccionado As Producto = CType(fila.DataBoundItem, Producto)
+
+        If dgvProductos.Columns(e.ColumnIndex).Name = "btnModificar" Then
+            ' Abrir formulario de modificación con datos precargados
             Dim frmModif As New frmAgregarProducto()
             frmModif.ProductoParaModificar = productoSeleccionado
             If frmModif.ShowDialog() = DialogResult.OK Then
                 dgvProductos.DataSource = New ProductoNegocio().listar()
                 AgregarBotonesAccion()
             End If
+
+        ElseIf dgvProductos.Columns(e.ColumnIndex).Name = "btnEliminar" Then
+            ' Confirmar y eliminar producto
+            Dim confirmar As DialogResult = MessageBox.Show(
+                $"¿Estás seguro que querés eliminar el producto '{productoSeleccionado.Nombre}'?",
+                "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If confirmar = DialogResult.Yes Then
+                Try
+                    Dim negocio As New ProductoNegocio()
+                    negocio.eliminar(productoSeleccionado.Id)
+                    MessageBox.Show("Producto eliminado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    dgvProductos.DataSource = negocio.listar()
+                    AgregarBotonesAccion()
+                Catch ex As Exception
+                    MessageBox.Show("Error al eliminar: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End Try
+            End If
         End If
     End Sub
+
 
 End Class

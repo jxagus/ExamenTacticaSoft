@@ -33,10 +33,13 @@ Partial Class frmMenu
         Me.PanelTitulo = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.PanelContenedor = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
         CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTitulo.SuspendLayout()
+        Me.PanelContenedor.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenu
@@ -117,8 +120,16 @@ Partial Class frmMenu
         '
         'PanelContenedor
         '
+        Me.PanelContenedor.Controls.Add(Me.PictureBox1)
         resources.ApplyResources(Me.PanelContenedor, "PanelContenedor")
         Me.PanelContenedor.Name = "PanelContenedor"
+        '
+        'PictureBox1
+        '
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.ExamenTacticaSoft.My.Resources.Resources.Logo
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
         '
         'frmMenu
         '
@@ -134,6 +145,8 @@ Partial Class frmMenu
         CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTitulo.ResumeLayout(False)
         Me.PanelTitulo.PerformLayout()
+        Me.PanelContenedor.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -147,4 +160,5 @@ Partial Class frmMenu
     Friend WithEvents lblTitulo As Label
     Friend WithEvents ptbImagenLogo As PictureBox
     Friend WithEvents PanelContenedor As Panel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

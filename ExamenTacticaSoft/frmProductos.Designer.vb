@@ -66,14 +66,14 @@ Partial Class frmProductos
         'dgvProductos
         '
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Location = New System.Drawing.Point(12, 83)
+        Me.dgvProductos.Location = New System.Drawing.Point(17, 80)
         Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.Size = New System.Drawing.Size(637, 300)
+        Me.dgvProductos.Size = New System.Drawing.Size(660, 300)
         Me.dgvProductos.TabIndex = 41
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(688, 150)
+        Me.btnAgregar.Location = New System.Drawing.Point(714, 158)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(108, 56)
         Me.btnAgregar.TabIndex = 48
@@ -133,7 +133,7 @@ Partial Class frmProductos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(655, 121)
+        Me.Label1.Location = New System.Drawing.Point(683, 130)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(176, 13)
         Me.Label1.TabIndex = 56
@@ -143,7 +143,7 @@ Partial Class frmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(837, 450)
+        Me.ClientSize = New System.Drawing.Size(876, 456)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtFiltro)
         Me.Controls.Add(Me.Label3)

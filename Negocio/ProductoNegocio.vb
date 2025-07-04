@@ -70,16 +70,16 @@ Public Class ProductoNegocio
         Dim acceso As New AccesoDatos()
 
         Try
-            acceso.SetearConsulta("DELETE FROM productos WHERE ID = @id")
+            acceso.SetearConsulta("DELETE FROM productos WHERE Id = @id")
             acceso.SetearParametro("@id", id)
             acceso.EjecutarAccion()
-
         Catch ex As Exception
             Throw ex
         Finally
             acceso.CerrarConexion()
         End Try
     End Sub
+
     'FILTRAR
     Public Function Filtrar(campo As String, criterio As String, filtro As String) As List(Of Producto)
         Dim lista As New List(Of Producto)

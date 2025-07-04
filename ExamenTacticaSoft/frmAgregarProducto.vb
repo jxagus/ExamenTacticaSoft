@@ -26,9 +26,7 @@ Public Class frmAgregarProducto
             nuevoProducto.Precio = precioDecimal
             nuevoProducto.Categoria = tbCategoria.Text.Trim()
 
-            ' Insertar en base de datos
             Dim negocio As New ProductoNegocio()
-            negocio.agregar(nuevoProducto)
 
             If ProductoParaModificar IsNot Nothing Then
                 nuevoProducto.Id = ProductoParaModificar.Id
@@ -38,6 +36,7 @@ Public Class frmAgregarProducto
                 negocio.agregar(nuevoProducto)
                 MessageBox.Show("Producto agregado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
+
             Me.DialogResult = DialogResult.OK
             Me.Close()
         Catch ex As AccessViolationException
