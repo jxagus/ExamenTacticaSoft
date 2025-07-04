@@ -26,15 +26,14 @@ Partial Class frmClientes
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblCampo = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cbCriterio = New System.Windows.Forms.ComboBox()
+        Me.cbCampo = New System.Windows.Forms.ComboBox()
         Me.lblFiltroRapido = New System.Windows.Forms.Label()
         Me.lblClientes = New System.Windows.Forms.Label()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.txtFiltro = New System.Windows.Forms.TextBox()
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -72,38 +71,21 @@ Partial Class frmClientes
         Me.lblCampo.TabIndex = 21
         Me.lblCampo.Text = "Campo:"
         '
-        'ComboBox3
+        'cbCriterio
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(404, 406)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(80, 21)
-        Me.ComboBox3.TabIndex = 20
+        Me.cbCriterio.FormattingEnabled = True
+        Me.cbCriterio.Location = New System.Drawing.Point(219, 406)
+        Me.cbCriterio.Name = "cbCriterio"
+        Me.cbCriterio.Size = New System.Drawing.Size(134, 21)
+        Me.cbCriterio.TabIndex = 19
         '
-        'ComboBox2
+        'cbCampo
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(219, 406)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(134, 21)
-        Me.ComboBox2.TabIndex = 19
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(55, 406)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(102, 21)
-        Me.ComboBox1.TabIndex = 18
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(577, 404)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cbCampo.FormattingEnabled = True
+        Me.cbCampo.Location = New System.Drawing.Point(55, 406)
+        Me.cbCampo.Name = "cbCampo"
+        Me.cbCampo.Size = New System.Drawing.Size(102, 21)
+        Me.cbCampo.TabIndex = 18
         '
         'lblFiltroRapido
         '
@@ -135,7 +117,7 @@ Partial Class frmClientes
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(687, 166)
+        Me.Label1.Location = New System.Drawing.Point(664, 166)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(165, 13)
         Me.Label1.TabIndex = 58
@@ -143,18 +125,26 @@ Partial Class frmClientes
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(720, 182)
+        Me.btnAgregar.Location = New System.Drawing.Point(697, 182)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(108, 56)
         Me.btnAgregar.TabIndex = 57
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
+        'txtFiltro
+        '
+        Me.txtFiltro.Location = New System.Drawing.Point(397, 407)
+        Me.txtFiltro.Name = "txtFiltro"
+        Me.txtFiltro.Size = New System.Drawing.Size(100, 20)
+        Me.txtFiltro.TabIndex = 59
+        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(861, 450)
+        Me.Controls.Add(Me.txtFiltro)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.lblClientes)
@@ -163,10 +153,8 @@ Partial Class frmClientes
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblCampo)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cbCriterio)
+        Me.Controls.Add(Me.cbCampo)
         Me.Controls.Add(Me.lblFiltroRapido)
         Me.Name = "frmClientes"
         Me.Text = "frmClientes"
@@ -179,13 +167,12 @@ Partial Class frmClientes
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents lblCampo As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents cbCriterio As ComboBox
+    Friend WithEvents cbCampo As ComboBox
     Friend WithEvents lblFiltroRapido As Label
     Friend WithEvents lblClientes As Label
     Friend WithEvents dgvClientes As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents btnAgregar As Button
+    Friend WithEvents txtFiltro As TextBox
 End Class

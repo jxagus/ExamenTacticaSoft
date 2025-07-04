@@ -51,23 +51,23 @@ Partial Class frmVentas
         'cbClientes
         '
         Me.cbClientes.FormattingEnabled = True
-        Me.cbClientes.Location = New System.Drawing.Point(88, 119)
+        Me.cbClientes.Location = New System.Drawing.Point(68, 122)
         Me.cbClientes.Name = "cbClientes"
-        Me.cbClientes.Size = New System.Drawing.Size(121, 21)
+        Me.cbClientes.Size = New System.Drawing.Size(139, 21)
         Me.cbClientes.TabIndex = 43
         '
         'cbProductos
         '
         Me.cbProductos.FormattingEnabled = True
-        Me.cbProductos.Location = New System.Drawing.Point(88, 163)
+        Me.cbProductos.Location = New System.Drawing.Point(68, 166)
         Me.cbProductos.Name = "cbProductos"
-        Me.cbProductos.Size = New System.Drawing.Size(121, 21)
+        Me.cbProductos.Size = New System.Drawing.Size(139, 21)
         Me.cbProductos.TabIndex = 44
         '
         'lblClient
         '
         Me.lblClient.AutoSize = True
-        Me.lblClient.Location = New System.Drawing.Point(29, 122)
+        Me.lblClient.Location = New System.Drawing.Point(9, 125)
         Me.lblClient.Name = "lblClient"
         Me.lblClient.Size = New System.Drawing.Size(44, 13)
         Me.lblClient.TabIndex = 46
@@ -76,7 +76,7 @@ Partial Class frmVentas
         'lblProducto
         '
         Me.lblProducto.AutoSize = True
-        Me.lblProducto.Location = New System.Drawing.Point(29, 163)
+        Me.lblProducto.Location = New System.Drawing.Point(9, 166)
         Me.lblProducto.Name = "lblProducto"
         Me.lblProducto.Size = New System.Drawing.Size(50, 13)
         Me.lblProducto.TabIndex = 47
@@ -84,15 +84,15 @@ Partial Class frmVentas
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(88, 199)
+        Me.txtCantidad.Location = New System.Drawing.Point(68, 202)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(121, 20)
+        Me.txtCantidad.Size = New System.Drawing.Size(139, 20)
         Me.txtCantidad.TabIndex = 48
         '
         'lblCantidad
         '
         Me.lblCantidad.AutoSize = True
-        Me.lblCantidad.Location = New System.Drawing.Point(32, 199)
+        Me.lblCantidad.Location = New System.Drawing.Point(12, 202)
         Me.lblCantidad.Name = "lblCantidad"
         Me.lblCantidad.Size = New System.Drawing.Size(49, 13)
         Me.lblCantidad.TabIndex = 49
@@ -100,7 +100,7 @@ Partial Class frmVentas
         '
         'btnAgregarProducto
         '
-        Me.btnAgregarProducto.Location = New System.Drawing.Point(88, 242)
+        Me.btnAgregarProducto.Location = New System.Drawing.Point(68, 245)
         Me.btnAgregarProducto.Name = "btnAgregarProducto"
         Me.btnAgregarProducto.Size = New System.Drawing.Size(121, 40)
         Me.btnAgregarProducto.TabIndex = 50
