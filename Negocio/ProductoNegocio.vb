@@ -136,5 +136,36 @@ Public Class ProductoNegocio
             datos.CerrarConexion()
         End Try
     End Function
+    'FILTRO FAST
+    Public Function FiltrarPorNombreOCategoriaOPrecio(filtro As String) As List(Of Producto)
+        Dim lista As New List(Of Producto)
+        Dim datos As New AccesoDatos()
+
+        Try
+            Dim consulta As String = "SELECT ID, Nombre, Precio, Categoria FROM productos " &
+                                 "WHERE Nombre LIKE @filtro " &
+                                 "OR Categoria LIKE @filtro " &
+                                 "OR CAST(Precio AS VARCHAR) LIKE @filtro"
+
+            datos.SetearConsulta(consulta)
+            datos.SetearParametro("@filtro", "%" & filtro & "%")
+            datos.EjecutarLectura()
+
+            While datos.LectorDatos.Read()
+                Dim p As New Producto()
+                p.Id = datos.LectorDatos("ID")
+                p.Nombre = datos.LectorDatos("Nombre").ToString()
+                p.Precio = Convert.ToDecimal(datos.LectorDatos("Precio"))
+                p.Categoria = datos.LectorDatos("Categoria").ToString()
+                lista.Add(p)
+            End While
+
+            Return lista
+        Catch ex As Exception
+            Throw
+        Finally
+            datos.CerrarConexion()
+        End Try
+    End Function
 
 End Class

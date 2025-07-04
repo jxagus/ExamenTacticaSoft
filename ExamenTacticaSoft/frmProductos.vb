@@ -144,5 +144,22 @@ Public Class frmProductos
         End If
     End Sub
 
+    Private Sub txtFiltroRapido_TextChanged(sender As Object, e As EventArgs) Handles txtFiltroRapido.TextChanged
+        Dim texto As String = txtFiltroRapido.Text.Trim()
 
+        Dim negocio As New ProductoNegocio()
+
+        If texto.Length < 2 Then
+            dgvProductos.DataSource = negocio.listar()
+            ' Si tenés método para botones u otras cosas, llamalo acá
+            Return
+        End If
+
+        Try
+            Dim listaFiltrada As List(Of Producto) = negocio.FiltrarPorNombreOCategoriaOPrecio(texto)
+            dgvProductos.DataSource = listaFiltrada
+        Catch ex As Exception
+            MessageBox.Show("Error al filtrar productos: " & ex.Message)
+        End Try
+    End Sub
 End Class

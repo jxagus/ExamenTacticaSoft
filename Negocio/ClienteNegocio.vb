@@ -279,6 +279,34 @@ Public Class ClienteNegocio
             datos.CerrarConexion()
         End Try
     End Function
+    Public Function FiltrarPorNombreOTelefono(filtro As String) As List(Of Cliente)
+        Dim lista As New List(Of Cliente)
+        Dim datos As New AccesoDatos()
+
+        Try
+            Dim consulta As String = "SELECT ID, cliente, telefono, correo FROM clientes " &
+                                 "WHERE cliente LIKE @filtro OR CAST(telefono AS VARCHAR) LIKE @filtro"
+
+            datos.SetearConsulta(consulta)
+            datos.SetearParametro("@filtro", "%" & filtro & "%")
+            datos.EjecutarLectura()
+
+            While datos.LectorDatos.Read()
+                Dim p As New Cliente()
+                p.Id = datos.LectorDatos("ID")
+                p.NombreCliente = datos.LectorDatos("cliente").ToString()
+                p.Telefono = datos.LectorDatos("telefono").ToString()
+                p.Correo = datos.LectorDatos("correo").ToString()
+                lista.Add(p)
+            End While
+
+            Return lista
+        Catch ex As Exception
+            Throw
+        Finally
+            datos.CerrarConexion()
+        End Try
+    End Function
 
 
 

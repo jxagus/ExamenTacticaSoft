@@ -22,7 +22,7 @@ Partial Class frmClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtFiltroRapido = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblCampo = New System.Windows.Forms.Label()
@@ -37,12 +37,12 @@ Partial Class frmClientes
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtFiltroRapido
         '
-        Me.TextBox1.Location = New System.Drawing.Point(76, 48)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 25
+        Me.txtFiltroRapido.Location = New System.Drawing.Point(76, 48)
+        Me.txtFiltroRapido.Name = "txtFiltroRapido"
+        Me.txtFiltroRapido.Size = New System.Drawing.Size(100, 20)
+        Me.txtFiltroRapido.TabIndex = 25
         '
         'Label3
         '
@@ -148,7 +148,7 @@ Partial Class frmClientes
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.lblClientes)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtFiltroRapido)
         Me.Controls.Add(Me.dgvClientes)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -163,7 +163,7 @@ Partial Class frmClientes
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtFiltroRapido As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents lblCampo As Label

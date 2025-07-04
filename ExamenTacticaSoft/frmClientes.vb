@@ -2,6 +2,7 @@
 Imports Dominio
 Imports System.Globalization
 Imports System.Text
+Imports System.Data.SqlClient
 
 
 Public Class frmClientes
@@ -165,4 +166,29 @@ Public Class frmClientes
             AgregarBotonesAccion()
         End If
     End Sub
+
+    Private Sub txtFiltroRapido_TextChanged(sender As Object, e As EventArgs) Handles txtFiltroRapido.TextChanged
+        Dim texto As String = txtFiltroRapido.Text.Trim()
+
+        Dim negocio As New ClienteNegocio()
+
+        If texto.Length < 2 Then
+            dgvClientes.DataSource = negocio.listar()
+            AgregarBotonesAccion()
+            Return
+        End If
+
+        Try
+            Dim lista As New List(Of Cliente)
+
+            ' Filtramos clientes que contengan el texto en nombre o teléfono (como texto)
+            lista = negocio.FiltrarPorNombreOTelefono(texto)
+
+            dgvClientes.DataSource = lista
+            AgregarBotonesAccion()
+        Catch ex As Exception
+            MessageBox.Show("Error al filtrar rápido: " & ex.Message)
+        End Try
+    End Sub
+
 End Class
