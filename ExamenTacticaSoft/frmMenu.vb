@@ -90,5 +90,7 @@
 
     End Sub
 
+    Private Sub lblTitulo_Click(sender As Object, e As EventArgs) Handles lblTitulo.Click
 
+    End Sub
 End Class

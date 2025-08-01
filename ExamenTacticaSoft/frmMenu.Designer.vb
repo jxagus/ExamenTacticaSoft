@@ -58,7 +58,7 @@ Partial Class frmMenu
         Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         resources.ApplyResources(Me.btnSalir, "btnSalir")
         Me.btnSalir.FlatAppearance.BorderSize = 0
-        Me.btnSalir.ForeColor = System.Drawing.Color.Black
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
@@ -67,7 +67,7 @@ Partial Class frmMenu
         Me.btnVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         resources.ApplyResources(Me.btnVentas, "btnVentas")
         Me.btnVentas.FlatAppearance.BorderSize = 0
-        Me.btnVentas.ForeColor = System.Drawing.Color.Black
+        Me.btnVentas.ForeColor = System.Drawing.Color.White
         Me.btnVentas.Name = "btnVentas"
         Me.btnVentas.UseVisualStyleBackColor = False
         '
@@ -76,7 +76,7 @@ Partial Class frmMenu
         Me.btnProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         resources.ApplyResources(Me.btnProductos, "btnProductos")
         Me.btnProductos.FlatAppearance.BorderSize = 0
-        Me.btnProductos.ForeColor = System.Drawing.Color.Black
+        Me.btnProductos.ForeColor = System.Drawing.Color.White
         Me.btnProductos.Name = "btnProductos"
         Me.btnProductos.UseVisualStyleBackColor = False
         '
@@ -85,7 +85,7 @@ Partial Class frmMenu
         Me.btnClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer))
         resources.ApplyResources(Me.btnClientes, "btnClientes")
         Me.btnClientes.FlatAppearance.BorderSize = 0
-        Me.btnClientes.ForeColor = System.Drawing.Color.Black
+        Me.btnClientes.ForeColor = System.Drawing.Color.White
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.UseVisualStyleBackColor = False
         '
