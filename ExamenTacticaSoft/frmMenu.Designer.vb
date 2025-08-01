@@ -44,7 +44,7 @@ Partial Class frmMenu
         '
         'PanelMenu
         '
-        Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.PanelMenu.Controls.Add(Me.btnSalir)
         Me.PanelMenu.Controls.Add(Me.btnVentas)
         Me.PanelMenu.Controls.Add(Me.btnProductos)
@@ -55,7 +55,7 @@ Partial Class frmMenu
         '
         'btnSalir
         '
-        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         resources.ApplyResources(Me.btnSalir, "btnSalir")
         Me.btnSalir.FlatAppearance.BorderSize = 0
         Me.btnSalir.ForeColor = System.Drawing.Color.Black
@@ -64,7 +64,7 @@ Partial Class frmMenu
         '
         'btnVentas
         '
-        Me.btnVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnVentas.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         resources.ApplyResources(Me.btnVentas, "btnVentas")
         Me.btnVentas.FlatAppearance.BorderSize = 0
         Me.btnVentas.ForeColor = System.Drawing.Color.Black
@@ -73,7 +73,7 @@ Partial Class frmMenu
         '
         'btnProductos
         '
-        Me.btnProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         resources.ApplyResources(Me.btnProductos, "btnProductos")
         Me.btnProductos.FlatAppearance.BorderSize = 0
         Me.btnProductos.ForeColor = System.Drawing.Color.Black
@@ -82,7 +82,7 @@ Partial Class frmMenu
         '
         'btnClientes
         '
-        Me.btnClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(67, Byte), Integer))
         resources.ApplyResources(Me.btnClientes, "btnClientes")
         Me.btnClientes.FlatAppearance.BorderSize = 0
         Me.btnClientes.ForeColor = System.Drawing.Color.Black
@@ -98,14 +98,14 @@ Partial Class frmMenu
         '
         'ptbImagenLogo
         '
-        Me.ptbImagenLogo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ptbImagenLogo.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         resources.ApplyResources(Me.ptbImagenLogo, "ptbImagenLogo")
         Me.ptbImagenLogo.Name = "ptbImagenLogo"
         Me.ptbImagenLogo.TabStop = False
         '
         'PanelTitulo
         '
-        Me.PanelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.PanelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.PanelTitulo.Controls.Add(Me.lblTitulo)
         resources.ApplyResources(Me.PanelTitulo, "PanelTitulo")
         Me.PanelTitulo.ForeColor = System.Drawing.SystemColors.Control
@@ -114,7 +114,7 @@ Partial Class frmMenu
         'lblTitulo
         '
         resources.ApplyResources(Me.lblTitulo, "lblTitulo")
-        Me.lblTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.lblTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
         Me.lblTitulo.ForeColor = System.Drawing.Color.White
         Me.lblTitulo.Name = "lblTitulo"
         '
