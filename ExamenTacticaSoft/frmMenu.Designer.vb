@@ -29,17 +29,14 @@ Partial Class frmMenu
         Me.btnProductos = New System.Windows.Forms.Button()
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
-        Me.ptbImagenLogo = New System.Windows.Forms.PictureBox()
         Me.PanelTitulo = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.PanelContenedor = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ptbImagenLogo = New System.Windows.Forms.PictureBox()
         Me.PanelMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
-        CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelTitulo.SuspendLayout()
-        Me.PanelContenedor.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelMenu
@@ -96,13 +93,6 @@ Partial Class frmMenu
         resources.ApplyResources(Me.PanelLogo, "PanelLogo")
         Me.PanelLogo.Name = "PanelLogo"
         '
-        'ptbImagenLogo
-        '
-        Me.ptbImagenLogo.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
-        resources.ApplyResources(Me.ptbImagenLogo, "ptbImagenLogo")
-        Me.ptbImagenLogo.Name = "ptbImagenLogo"
-        Me.ptbImagenLogo.TabStop = False
-        '
         'PanelTitulo
         '
         Me.PanelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
@@ -120,16 +110,15 @@ Partial Class frmMenu
         '
         'PanelContenedor
         '
-        Me.PanelContenedor.Controls.Add(Me.PictureBox1)
         resources.ApplyResources(Me.PanelContenedor, "PanelContenedor")
         Me.PanelContenedor.Name = "PanelContenedor"
         '
-        'PictureBox1
+        'ptbImagenLogo
         '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.Image = Global.ExamenTacticaSoft.My.Resources.Resources.Logo
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
+        Me.ptbImagenLogo.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
+        resources.ApplyResources(Me.ptbImagenLogo, "ptbImagenLogo")
+        Me.ptbImagenLogo.Name = "ptbImagenLogo"
+        Me.ptbImagenLogo.TabStop = False
         '
         'frmMenu
         '
@@ -142,11 +131,9 @@ Partial Class frmMenu
         Me.Name = "frmMenu"
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelLogo.ResumeLayout(False)
-        CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTitulo.ResumeLayout(False)
         Me.PanelTitulo.PerformLayout()
-        Me.PanelContenedor.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -160,5 +147,4 @@ Partial Class frmMenu
     Friend WithEvents lblTitulo As Label
     Friend WithEvents ptbImagenLogo As PictureBox
     Friend WithEvents PanelContenedor As Panel
-    Friend WithEvents PictureBox1 As PictureBox
 End Class

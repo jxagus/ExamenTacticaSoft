@@ -93,4 +93,12 @@
     Private Sub lblTitulo_Click(sender As Object, e As EventArgs) Handles lblTitulo.Click
 
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ptbImagenLogo_Click(sender As Object, e As EventArgs) Handles ptbImagenLogo.Click
+
+    End Sub
 End Class
