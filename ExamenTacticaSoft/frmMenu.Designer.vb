@@ -29,14 +29,14 @@ Partial Class frmMenu
         Me.btnProductos = New System.Windows.Forms.Button()
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
+        Me.ptbImagenLogo = New System.Windows.Forms.PictureBox()
         Me.PanelTitulo = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.PanelContenedor = New System.Windows.Forms.Panel()
-        Me.ptbImagenLogo = New System.Windows.Forms.PictureBox()
         Me.PanelMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
-        Me.PanelTitulo.SuspendLayout()
         CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelTitulo.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelMenu
@@ -93,6 +93,13 @@ Partial Class frmMenu
         resources.ApplyResources(Me.PanelLogo, "PanelLogo")
         Me.PanelLogo.Name = "PanelLogo"
         '
+        'ptbImagenLogo
+        '
+        Me.ptbImagenLogo.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
+        resources.ApplyResources(Me.ptbImagenLogo, "ptbImagenLogo")
+        Me.ptbImagenLogo.Name = "ptbImagenLogo"
+        Me.ptbImagenLogo.TabStop = False
+        '
         'PanelTitulo
         '
         Me.PanelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
@@ -113,13 +120,6 @@ Partial Class frmMenu
         resources.ApplyResources(Me.PanelContenedor, "PanelContenedor")
         Me.PanelContenedor.Name = "PanelContenedor"
         '
-        'ptbImagenLogo
-        '
-        Me.ptbImagenLogo.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(68, Byte), Integer))
-        resources.ApplyResources(Me.ptbImagenLogo, "ptbImagenLogo")
-        Me.ptbImagenLogo.Name = "ptbImagenLogo"
-        Me.ptbImagenLogo.TabStop = False
-        '
         'frmMenu
         '
         resources.ApplyResources(Me, "$this")
@@ -131,9 +131,9 @@ Partial Class frmMenu
         Me.Name = "frmMenu"
         Me.PanelMenu.ResumeLayout(False)
         Me.PanelLogo.ResumeLayout(False)
+        CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelTitulo.ResumeLayout(False)
         Me.PanelTitulo.PerformLayout()
-        CType(Me.ptbImagenLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

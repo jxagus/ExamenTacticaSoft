@@ -68,7 +68,7 @@ Partial Class frmProductos
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProductos.Location = New System.Drawing.Point(17, 80)
         Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.Size = New System.Drawing.Size(660, 300)
+        Me.dgvProductos.Size = New System.Drawing.Size(651, 300)
         Me.dgvProductos.TabIndex = 41
         '
         'btnAgregar
