@@ -39,15 +39,15 @@ Partial Class frmProductos
         '
         'txtFiltroRapido
         '
-        Me.txtFiltroRapido.Location = New System.Drawing.Point(81, 54)
+        Me.txtFiltroRapido.Location = New System.Drawing.Point(181, 76)
         Me.txtFiltroRapido.Name = "txtFiltroRapido"
-        Me.txtFiltroRapido.Size = New System.Drawing.Size(100, 20)
+        Me.txtFiltroRapido.Size = New System.Drawing.Size(144, 20)
         Me.txtFiltroRapido.TabIndex = 38
         '
         'lblFiltroRapido
         '
         Me.lblFiltroRapido.AutoSize = True
-        Me.lblFiltroRapido.Location = New System.Drawing.Point(12, 54)
+        Me.lblFiltroRapido.Location = New System.Drawing.Point(112, 76)
         Me.lblFiltroRapido.Name = "lblFiltroRapido"
         Me.lblFiltroRapido.Size = New System.Drawing.Size(66, 13)
         Me.lblFiltroRapido.TabIndex = 27
@@ -57,7 +57,7 @@ Partial Class frmProductos
         '
         Me.lbltitulo.AutoSize = True
         Me.lbltitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltitulo.Location = New System.Drawing.Point(321, 9)
+        Me.lbltitulo.Location = New System.Drawing.Point(347, 9)
         Me.lbltitulo.Name = "lbltitulo"
         Me.lbltitulo.Size = New System.Drawing.Size(137, 31)
         Me.lbltitulo.TabIndex = 40
@@ -66,16 +66,16 @@ Partial Class frmProductos
         'dgvProductos
         '
         Me.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProductos.Location = New System.Drawing.Point(17, 80)
+        Me.dgvProductos.Location = New System.Drawing.Point(114, 136)
         Me.dgvProductos.Name = "dgvProductos"
-        Me.dgvProductos.Size = New System.Drawing.Size(651, 300)
+        Me.dgvProductos.Size = New System.Drawing.Size(656, 312)
         Me.dgvProductos.TabIndex = 41
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(710, 89)
+        Me.btnAgregar.Location = New System.Drawing.Point(377, 476)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(108, 56)
+        Me.btnAgregar.Size = New System.Drawing.Size(123, 24)
         Me.btnAgregar.TabIndex = 48
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -83,7 +83,7 @@ Partial Class frmProductos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(363, 410)
+        Me.Label3.Location = New System.Drawing.Point(468, 112)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(32, 13)
         Me.Label3.TabIndex = 54
@@ -92,7 +92,7 @@ Partial Class frmProductos
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(178, 410)
+        Me.Label2.Location = New System.Drawing.Point(283, 112)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(42, 13)
         Me.Label2.TabIndex = 53
@@ -101,7 +101,7 @@ Partial Class frmProductos
         'lblCampo
         '
         Me.lblCampo.AutoSize = True
-        Me.lblCampo.Location = New System.Drawing.Point(14, 410)
+        Me.lblCampo.Location = New System.Drawing.Point(115, 109)
         Me.lblCampo.Name = "lblCampo"
         Me.lblCampo.Size = New System.Drawing.Size(43, 13)
         Me.lblCampo.TabIndex = 52
@@ -110,7 +110,7 @@ Partial Class frmProductos
         'cbCriterio
         '
         Me.cbCriterio.FormattingEnabled = True
-        Me.cbCriterio.Location = New System.Drawing.Point(223, 407)
+        Me.cbCriterio.Location = New System.Drawing.Point(328, 109)
         Me.cbCriterio.Name = "cbCriterio"
         Me.cbCriterio.Size = New System.Drawing.Size(134, 21)
         Me.cbCriterio.TabIndex = 50
@@ -118,14 +118,14 @@ Partial Class frmProductos
         'cbCampo
         '
         Me.cbCampo.FormattingEnabled = True
-        Me.cbCampo.Location = New System.Drawing.Point(59, 407)
+        Me.cbCampo.Location = New System.Drawing.Point(164, 109)
         Me.cbCampo.Name = "cbCampo"
         Me.cbCampo.Size = New System.Drawing.Size(102, 21)
         Me.cbCampo.TabIndex = 49
         '
         'txtFiltro
         '
-        Me.txtFiltro.Location = New System.Drawing.Point(401, 408)
+        Me.txtFiltro.Location = New System.Drawing.Point(506, 110)
         Me.txtFiltro.Name = "txtFiltro"
         Me.txtFiltro.Size = New System.Drawing.Size(100, 20)
         Me.txtFiltro.TabIndex = 55
@@ -133,7 +133,7 @@ Partial Class frmProductos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(667, 57)
+        Me.Label1.Location = New System.Drawing.Point(350, 460)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(176, 13)
         Me.Label1.TabIndex = 56
@@ -143,7 +143,7 @@ Partial Class frmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(876, 456)
+        Me.ClientSize = New System.Drawing.Size(865, 531)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtFiltro)
         Me.Controls.Add(Me.Label3)

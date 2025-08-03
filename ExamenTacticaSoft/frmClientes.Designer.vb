@@ -56,7 +56,7 @@ Partial Class frmClientes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(286, 120)
+        Me.Label2.Location = New System.Drawing.Point(272, 120)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(42, 13)
         Me.Label2.TabIndex = 22
@@ -65,7 +65,7 @@ Partial Class frmClientes
         'lblCampo
         '
         Me.lblCampo.AutoSize = True
-        Me.lblCampo.Location = New System.Drawing.Point(120, 120)
+        Me.lblCampo.Location = New System.Drawing.Point(105, 120)
         Me.lblCampo.Name = "lblCampo"
         Me.lblCampo.Size = New System.Drawing.Size(43, 13)
         Me.lblCampo.TabIndex = 21
@@ -74,7 +74,7 @@ Partial Class frmClientes
         'cbCriterio
         '
         Me.cbCriterio.FormattingEnabled = True
-        Me.cbCriterio.Location = New System.Drawing.Point(331, 117)
+        Me.cbCriterio.Location = New System.Drawing.Point(320, 117)
         Me.cbCriterio.Name = "cbCriterio"
         Me.cbCriterio.Size = New System.Drawing.Size(134, 21)
         Me.cbCriterio.TabIndex = 19
@@ -82,7 +82,7 @@ Partial Class frmClientes
         'cbCampo
         '
         Me.cbCampo.FormattingEnabled = True
-        Me.cbCampo.Location = New System.Drawing.Point(169, 117)
+        Me.cbCampo.Location = New System.Drawing.Point(154, 117)
         Me.cbCampo.Name = "cbCampo"
         Me.cbCampo.Size = New System.Drawing.Size(102, 21)
         Me.cbCampo.TabIndex = 18
@@ -117,7 +117,7 @@ Partial Class frmClientes
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(377, 464)
+        Me.Label1.Location = New System.Drawing.Point(355, 456)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(165, 13)
         Me.Label1.TabIndex = 58
@@ -125,7 +125,7 @@ Partial Class frmClientes
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(397, 480)
+        Me.btnAgregar.Location = New System.Drawing.Point(375, 472)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(128, 29)
         Me.btnAgregar.TabIndex = 57
