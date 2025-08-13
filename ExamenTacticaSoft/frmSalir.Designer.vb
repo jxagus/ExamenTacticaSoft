@@ -22,19 +22,19 @@ Partial Class frmSalir
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnSI = New System.Windows.Forms.Button()
+        Me.btnSi = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnNo = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'btnSI
+        'btnSi
         '
-        Me.btnSI.Location = New System.Drawing.Point(292, 163)
-        Me.btnSI.Name = "btnSI"
-        Me.btnSI.Size = New System.Drawing.Size(75, 23)
-        Me.btnSI.TabIndex = 0
-        Me.btnSI.Text = "Si"
-        Me.btnSI.UseVisualStyleBackColor = True
+        Me.btnSi.Location = New System.Drawing.Point(292, 163)
+        Me.btnSi.Name = "btnSi"
+        Me.btnSi.Size = New System.Drawing.Size(75, 23)
+        Me.btnSi.TabIndex = 0
+        Me.btnSi.Text = "Si"
+        Me.btnSi.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -61,7 +61,7 @@ Partial Class frmSalir
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnNo)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnSI)
+        Me.Controls.Add(Me.btnSi)
         Me.Name = "frmSalir"
         Me.Text = "frmSalir"
         Me.ResumeLayout(False)
@@ -69,7 +69,7 @@ Partial Class frmSalir
 
     End Sub
 
-    Friend WithEvents btnSI As Button
+    Friend WithEvents btnSi As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents btnNo As Button
 End Class
