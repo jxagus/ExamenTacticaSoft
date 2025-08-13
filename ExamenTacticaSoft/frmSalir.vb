@@ -1,11 +1,11 @@
 ﻿Public Class frmSalir
     Private Sub btnSi_Click(sender As Object, e As EventArgs) Handles btnSi.Click
-        ' Cerrar toda la aplicación
-        Application.Exit()
-    End Sub
+        Dim respuesta As DialogResult
+        respuesta = MessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-    Private Sub btnNo_Click(sender As Object, e As EventArgs) Handles btnNo.Click
-        ' Cerrar solo este formulario de salida y volver al principal
-        Me.Close()
+        If respuesta = DialogResult.Yes Then
+            Application.Exit() ' Cierra toda la aplicación
+        End If
     End Sub
 End Class
