@@ -145,9 +145,7 @@
     <Compile Include="frmVentas.Designer.vb">
       <DependentUpon>frmVentas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmVentas.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="frmVentas.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmAgregarCliente.resx">
