@@ -22,19 +22,19 @@ Partial Class frmSalir
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSI = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnNo = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnSI
         '
-        Me.Button1.Location = New System.Drawing.Point(292, 163)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Si"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSI.Location = New System.Drawing.Point(292, 163)
+        Me.btnSI.Name = "btnSI"
+        Me.btnSI.Size = New System.Drawing.Size(75, 23)
+        Me.btnSI.TabIndex = 0
+        Me.btnSI.Text = "Si"
+        Me.btnSI.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -45,23 +45,23 @@ Partial Class frmSalir
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Usted desea salir?"
         '
-        'Button2
+        'btnNo
         '
-        Me.Button2.Location = New System.Drawing.Point(430, 163)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "No"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnNo.Location = New System.Drawing.Point(430, 163)
+        Me.btnNo.Name = "btnNo"
+        Me.btnNo.Size = New System.Drawing.Size(75, 23)
+        Me.btnNo.TabIndex = 2
+        Me.btnNo.Text = "No"
+        Me.btnNo.UseVisualStyleBackColor = True
         '
         'frmSalir
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnNo)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSI)
         Me.Name = "frmSalir"
         Me.Text = "frmSalir"
         Me.ResumeLayout(False)
@@ -69,7 +69,7 @@ Partial Class frmSalir
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSI As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnNo As Button
 End Class
