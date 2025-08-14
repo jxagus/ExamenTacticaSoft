@@ -127,6 +127,7 @@ Partial Class frmMenu
         Me.Controls.Add(Me.PanelContenedor)
         Me.Controls.Add(Me.PanelTitulo)
         Me.Controls.Add(Me.PanelMenu)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.Name = "frmMenu"
         Me.PanelMenu.ResumeLayout(False)
