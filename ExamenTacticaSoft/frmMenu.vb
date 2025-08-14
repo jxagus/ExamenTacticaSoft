@@ -17,11 +17,12 @@
     Private Sub DesactivarBoton()
         If currentBtn IsNot Nothing Then
             'Volver a color y tamaño original
-            currentBtn.ForeColor = Color.Black
+            currentBtn.ForeColor = Color.White
             currentBtn.Font = New Font(currentBtn.Font.FontFamily, 9.75F, FontStyle.Regular)
             currentBtn = Nothing
         End If
     End Sub
+
     Private Sub ActualizarTitulo()
         If currentBtn IsNot Nothing Then
             Select Case currentBtn.Name
