@@ -216,6 +216,10 @@
     <Content Include="Img\Logo.png" />
     <Content Include="Img\LogoPng.png" />
     <Content Include="Logo.ico" />
+    <Content Include="Screamshots\Clientes.png" />
+    <Content Include="Screamshots\Historial.png" />
+    <Content Include="Screamshots\Productos.png" />
+    <Content Include="Screamshots\Ventas.png" />
     <None Include="Resources\logopng.png" />
   </ItemGroup>
   <ItemGroup>
