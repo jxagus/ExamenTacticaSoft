@@ -1,5 +1,5 @@
 El ejecutable .exe se encuentra en esta direccion
-C:\Users\agust\source\repos\ExamenTacticaSoft\ExamenTacticaSoft\bin\Debug
+C:\Users\agust\source\repos\ExamenTacticaSoft\GestorComercial_VBNet\bin\Debug
 
 Consigna
 1)Alta,baja y modificacion de clientes y productos.
