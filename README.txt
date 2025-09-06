@@ -1,5 +1,3 @@
-
-
 Este proyecto es una aplicación web desarrollada en **VB.Net**, con la función principal de permitir que un negocio sea gestionado. Los artículos están almacenados en una base de datos **SQL Server**.
 
 ## 💻 Funciones
