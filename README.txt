@@ -1,3 +1,5 @@
+# Gestión de Comercio
+
 Este proyecto es una aplicación web desarrollada en **VB.Net**, con la función principal de permitir que un negocio sea gestionado. Los artículos están almacenados en una base de datos **SQL Server**.
 
 ## 💻 Funciones
@@ -35,13 +37,9 @@ Este proyecto es una aplicación web desarrollada en **VB.Net**, con la función
 
 ## 🧰 Tecnologías 
 
-- **ASP.NET Web Forms**
-- **C# (.NET Framework)**
+- **VB (.NET Framework)**
 - **SQL Server**
 - **ADO.NET** 
-- **HTML5, CSS3, JavaScript**
-- **Bootstrap** & **Tailwind CSS**
-- **MailTrap**
 - **Arquitectura en capas**
 - **Validaciones**
 - **POO (Programación Orientada a Objetos)**
