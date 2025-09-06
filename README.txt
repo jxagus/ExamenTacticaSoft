@@ -14,7 +14,7 @@ Este proyecto es una aplicación web desarrollada en **VB.Net**, con la función
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/jxagus/GestorComercial_VBNet/blob/master/ExamenTacticaSoft/Screamshots/Clientes.png?raw=true" width="300"/><br/>
+      <img src="https://github.com/jxagus/GestorComercial_VBNet/blob/master/ExamenTacticaSoft/Screamshots/Clientes.png" width="300"/><br/>
       <b>Clientes</b>
     </td>
     <td align="center">
